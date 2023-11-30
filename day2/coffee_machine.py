@@ -92,3 +92,13 @@ while is_on:
             if is_transaction_successful(payment, drink["cost"]): 
                 make_coffee(choice, drink["ingredients"])
 
+
+
+
+'''Hello, I am Derek, Co-Founder of Rapidly and a seasoned Data Platform Software Engineer at a prominent financial institution, with a professional journey spanning over five years. My career commenced in the realm of applied Machine Learning (ML) research at a biophysics laboratory in UC Irvine. Subsequently, I ventured into the industry, starting as the inaugural team member at a data analytics startup within Coca Cola. My role there was pivotal in architecting and scaling the Machine Learning platform, leading to the formation of a robust team of over 10 ML specialists. My responsibilities encompassed three key domains: selecting and integrating the appropriate technology stack, developing advanced ML algorithms, and ensuring efficient model deployment. This experience has afforded me a comprehensive understanding of the Machine Learning lifecycle, from its inception to full-scale implementation.
+'''
+
+
+
+
+
