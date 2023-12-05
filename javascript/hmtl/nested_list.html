@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nested List Example</title>
+</head>
+<body>
+  <ul>
+    <li>Item 1</li>
+    <li>Item 2
+      <ul>
+        <li>Subitem 2.1</li>
+        <li>Subitem 2.2</li>
+      </ul>
+    </li>
+    <li>Item 3</li>
+  </ul>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nested List Example</title>
+    <style>
+        .nested-list {
+            margin-left: 20px;
+        }
+    </style>
+    <script>
+        function createNestedList(container, data) {
+            const ul = document.createElement('ul');
+            container.appendChild(ul);
+
+            data.forEach(item => {
+                const li = document.createElement('li');
+                ul.appendChild(li);
+
+                li.textContent = item.text;
+
+                if (item.children && item.children.length > 0) {
+                    const nestedContainer = document.createElement('div');
+                    nestedContainer.classList.add('nested-list');
+                    li.appendChild(nestedContainer);
+                    createNestedList(nestedContainer, item.children);
+                }
+            });
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('nested-list-container');
+            const data = [
+                {
+                    text: 'Item 1',
+                    children: []
+                },
+                {
+                    text: 'Item 2',
+                    children: [
+                        {
+                            text: 'Subitem 2.1',
+                            children: []
+                        },
+                        {
+                            text: 'Subitem 2.2',
+                            children: []
+                        }
+                    ]
+                },
+                {
+                    text: 'Item 3',
+                    children: []
+                }
+            ];
+
+            createNestedList(container, data);
+        });
+    </script>
+</head>
+<body>
+    <div id="nested-list-container"></div>
+</body>
+</html>
