@@ -1,4 +1,5 @@
 # from main import question_bank
+from data import question_data
 
 class QuizBrain:
     def __init__(self, question_list): 
