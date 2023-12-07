@@ -199,7 +199,7 @@ if (money) {
     console.log("You should get a job"); // this converts the if condition to false so it runs the else statement (falsey value) 
 }
 
-*/
+
 ////////////////////////////////////
 // Equality Operators: == vs. ===
 
@@ -227,3 +227,6 @@ if (favorite === 23) {
 if (favorite !== 23) console.log('Why not 23?') // strict (!==) and loose (!=) -- always use the strict version 
 
 */
+////////////////////////////////////
+// Logical Operators
+
