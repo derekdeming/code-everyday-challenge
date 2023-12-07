@@ -50,7 +50,7 @@ year = 1991;
 console.log(typeof year);
 
 console.log(typeof null);
-*/
+
 ////////////////////////////////////
 // let, const and var
 let age = 30;
@@ -115,3 +115,14 @@ const averageAge = (ageJonas + ageSarah) / 2;
 console.log(ageJonas, ageSarah, averageAge);
 
 ////////////////////////////////////
+*/
+
+const firstName = "derek"
+const job = "software engineer"
+const birthYear = 1998
+const curr_year = 2023
+
+const derek = "I'm " + firstName + ', a ' + (curr_year-birthYear) + ' years old ' + job + '!';
+console.log(derek)  
+
+const derekNew = `I'm ${firstName}, a ${curr_year-birthYear} years old ${job}!`;
