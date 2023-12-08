@@ -226,7 +226,30 @@ if (favorite === 23) {
 
 if (favorite !== 23) console.log('Why not 23?') // strict (!==) and loose (!=) -- always use the strict version 
 
-*/
+
 ////////////////////////////////////
 // Logical Operators
+
+const hasDriversLicense = true; // A
+const hasGoodVision = true; // B
+
+console.log(hasDriversLicense && hasGoodVision); // and operator
+console.log(hasDriversLicense || hasGoodVision); // or operator
+console.log(!hasDriversLicense); // not operator
+
+if (hasDriversLicense && hasGoodVision) {
+    console.log('Sarah is able to drive!')
+} else {
+    console.log('Someone else should drive...')
+}
+
+const isTired = false; // C
+console.log(hasDriversLicense && hasGoodVision && isTired); // false
+
+if (hasDriversLicense && hasGoodVision && !isTired) {
+    console.log('Sarah is able to drive!')
+} else {
+    console.log('Someone else should drive...')
+}
+*/
 
