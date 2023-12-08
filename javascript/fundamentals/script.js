@@ -251,5 +251,60 @@ if (hasDriversLicense && hasGoodVision && !isTired) {
 } else {
     console.log('Someone else should drive...')
 }
+
+
+const scoreDolphins = 96 + 108 + 89/ 3
+const scoreKoalas = 88 + 91 + 110 / 3
+
+if (scoreDolphins > scoreKoalas && scoreDolphins >= 100) {
+    console.log("Dolphins win the trophy!")
+} else if (scoreKoalas > scoreDolphins && scoreKoalas >= 100) {
+    console.log("Koalas win the trophy!")
+} else if (scoreDolphins === scoreKoalas && scoreDolphins >=100 && scoreKoalas >= 100) {
+    console.log('Both win the trophy')
+} else {
+    console.log('No one wins the trophy')
+}
 */
 
+////////////////////////////////////
+// The switch Statement
+const day = 'friday';
+
+switch (day) {
+    case 'monday': // day === 'monday'
+        console.log('Plan course structure');
+        console.log('Go to coding meetup');
+        break; // without break, it will continue to run the next case
+    case 'tuesday': 
+        console.log('Prepare theory videos');
+        break;
+    case 'wednesday':
+    case 'thursday':
+        console.log('Write code examples');
+        break;
+    case 'friday':
+        console.log('Record videos');
+        break;
+    case 'saturday':
+    case 'sunday':
+        console.log('Enjoy the weekend');
+        break;
+    default:
+        console.log('Not a valid day!');
+}
+
+if (day === 'monday') {
+    console.log('Plan course structure');
+    console.log('Go to coding meetup');
+} else if (day === 'tuesday') {
+    console.log('Prepare theory videos');
+} else if (day === 'wednesday' || 'thursday') {
+    console.log('Write code examples');
+} else if (day === 'friday') {
+    console.log('Record videos');
+} else if (day === 'saturday' || 'sunday') {
+    console.log('Enjoy the weekend');
+} else {
+    console.log('Not a valid day!');
+}
