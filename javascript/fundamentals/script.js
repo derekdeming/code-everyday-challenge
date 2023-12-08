@@ -265,7 +265,7 @@ if (scoreDolphins > scoreKoalas && scoreDolphins >= 100) {
 } else {
     console.log('No one wins the trophy')
 }
-*/
+
 
 ////////////////////////////////////
 // The switch Statement
@@ -307,4 +307,52 @@ if (day === 'monday') {
     console.log('Enjoy the weekend');
 } else {
     console.log('Not a valid day!');
+}
+
+
+
+////////////////////////////////////
+// Statements and Expressions
+3 + 4
+1991
+true && false && !false
+
+if (23> 10 ) {
+    const str = '23 is bigger'
+}
+const me = 'Jonas';
+console.log(`I'm ${2037 - 1991} years old ${me}`);
+
+*/
+
+////////////////////////////////////
+// The Conditional (Ternary) Operator
+const age = 23;
+age >= 18 ? console.log('I like to drink wine 🍷') : console.log('I like to drink water 💧');
+// condition ? if part : else part 
+
+const drink = age >= 18 ? 'wine' : 'water';
+console.log(drink); 
+
+let drink2;
+if (age >= 18) {
+  drink2 = 'wine 🍷';
+} else {
+  drink2 = 'water 💧';
+}
+console.log(drink2);
+
+console.log(`I like to drink ${age >= 18 ? 'wine 🍷' : 'water 💧'}`); 
+
+const bill = 430 
+const tip = bill <= 300 && bill >= 50 ? bill * .15 : bill * .2;
+console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`)
+
+let tip2; 
+if (bill <= 300 && bill >= 50) {
+    tip2 = bill * .15
+    console.log(`The bill was ${bill}, the tip was ${tip2}, and the total value was ${bill + tip2}`);
+} else if (bill <= 50 && bill >= 300) {
+    tip2 = bill * .20
+    console.log(`The bill was ${bill}, the tip was ${tip2}, and the total value was ${bill + tip2}`)
 }
