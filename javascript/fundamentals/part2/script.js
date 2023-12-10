@@ -214,5 +214,32 @@ if (friends.includes('Steven')) {
     console.log('You have a friend called Steven')
 }
 
+
+
+///////////////////////////////////////
+// Coding Challenge #2
+
+const calcTip = function (bill) {
+    if (bill >= 50 && bill <= 300) {
+        return bill * .15
+    } else {
+        return bill * .2
+    }
+}
+
+const bills = [125, 555, 44]
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])]
+const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2] ]
+console.log(bills, tips, totals)
+
 */
 
+///////////////////////////////////////
+// Introduction to Objects
+const jonasArray = [
+    'Jonas',
+    'Schmedtmann',
+    2037 - 1991,
+    'teacher',
+    ['Michael', 'Peter', 'Steven']
+  ];
