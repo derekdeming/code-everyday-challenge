@@ -56,7 +56,7 @@ const calcAge2 = function (birthyear) {
 
 const age2 = calcAge2(1991)
 console.log(age1, age2)
-*/
+
 
 ///////////////////////////////////////
 // Arrow functions (still considered a function expression -- return happens implicitly )
@@ -72,3 +72,67 @@ const yearsUntilRetirement = (birthyear, firstName) => {
 }
 console.log(yearsUntilRetirement(1991, 'Jonah'))
 console.log(yearsUntilRetirement(1980, 'Bob'))
+
+
+///////////////////////////////////////
+// Functions Calling Other Functions
+
+function cutFruitPieces(fruit) {
+    return fruit * 4;
+}
+
+function fruitProcessor(apples, oranges) {
+    const applePieces = cutFruitPieces(apples);
+    const orangePieces = cutFruitPieces(oranges);
+  
+    const juice = `Juice with ${applePieces} piece of apple and ${orangePieces} pieces of orange.`;
+    return juice;
+  }
+  console.log(fruitProcessor(2, 3));
+
+
+  ///////////////////////////////////////
+// Reviewing Functions
+
+const calcAge = function (birthyear) {
+    return 2037 - birthyear;
+  }
+  
+  const yearsUntilRetirement = function (birthyear, firstName) {
+    const age = calcAge(birthyear);
+    const retirement = 65 - age;
+  
+    if (retirement > 0) {
+      console.log(`${firstName} retires in ${retirement} years`);
+      return retirement;
+    } else {
+      console.log(`${firstName} has already retired 🎉`);
+      return -1;
+    }
+  }
+  
+  console.log(yearsUntilRetirement(1991, 'Jonas'));
+  console.log(yearsUntilRetirement(1950, 'Mike'));
+
+   //////// CODING  CHALLENGE: 
+   const calcAverage = (score1, score2, score3) => (score1 + score2 + score3) / 3
+console.log(calcAverage(44, 23, 71))
+
+let scoreDolphins = calcAverage(44, 23, 71)
+let scoreKoalas = calcAverage(65, 54, 49)
+console.log(scoreKoalas, scoreDolphins)
+
+const checkWinner = function (avgDolphins, avgKoalas) {
+    if (avgDolphins >= 2 * avgKoalas) {
+        console.log(`Dolphins win 🏆 (${avgDolphins} vs. ${avgKoalas})`)
+    } else if (avgKoalas >= 2 * avgDolphins) {
+        console.log(`Koalas win 🏆 (${avgKoalas} vs. ${avgDolphins})`)
+    } else {
+        console.log('No team wins')
+    }
+}
+
+checkWinner(scoreDolphins, scoreKoalas)
+*/
+///////////////////////////////////////
+// Introduction to Arrays
