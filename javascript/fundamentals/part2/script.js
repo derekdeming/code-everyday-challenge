@@ -232,7 +232,7 @@ const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])]
 const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2] ]
 console.log(bills, tips, totals)
 
-*/
+
 
 ///////////////////////////////////////
 // Introduction to Objects
@@ -243,3 +243,55 @@ const jonasArray = [
     'teacher',
     ['Michael', 'Peter', 'Steven']
   ];
+
+const jonas = {
+    firstName: 'Jonas',
+    lastName: 'Schmedtmann',
+    age: 2037 - 1991,
+    job: 'teacher',
+    friends: ['Michael', 'Peter', 'Steven']
+}; // object literal syntax 
+// objects are equivalent to dictionaries in python
+// objects are unordered
+console.log(jonas) // objects contain key value pairs which are called properties so firstName is a property of the jonas object
+
+*/
+
+
+///////////////////////////////////////
+// Dot vs. Bracket Notation
+const jonas = {
+    firstName: 'Jonas',
+    lastName: 'Schmedtmann',
+    age: 2037 - 1991,
+    job: 'teacher',
+    friends: ['Michael', 'Peter', 'Steven']
+  };
+console.log(jonas);
+
+console.log(jonas.lastName); // dot notation
+console.log(jonas['lastName']); // bracket notation
+
+const nameKey = 'Name';
+console.log(jonas['first' + nameKey]) // bracket notation with expression
+console.log(jonas['last' + nameKey])
+
+// console.log(jonas.'last' + nameKey) // dot notation with expression -- does not work
+
+const interestedIn = prompt('What do you want to know about Jonas? Choose between firstName, lastName, age, job, and friends') // prompt returns a string and is equivalent to input in python
+console.log(interestedIn)
+console.log(jonas[interestedIn]) // bracket notation with prompt
+
+if (jonas[interestedIn]) {
+    console.log(jonas[interestedIn])
+}
+else {
+    console.log('Wrong request! Choose between firstName, lastName, age, job, and friends')
+}
+
+jonas.location = 'Portugal' // adds a new property to the jonas object
+jonas['twitter'] = '@jonasschmedtman' // adds a new property to the jonas object
+console.log(jonas)
+
+// Challenge
+console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`);
