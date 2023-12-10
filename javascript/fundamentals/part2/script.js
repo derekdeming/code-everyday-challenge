@@ -136,3 +136,45 @@ checkWinner(scoreDolphins, scoreKoalas)
 */
 ///////////////////////////////////////
 // Introduction to Arrays
+const friend1 = 'Michael';
+const friend2 = 'Steven';
+const friend3 = 'Peter';
+
+const friends = ['Michael', 'Steven', 'Peter']
+console.log(friends)
+const friends2 = [friend1, friend2, friend3]
+console.log(friends2)
+const y = new Array(1991, 1987, 1988, 2009, 2303);
+console.log(y)
+
+console.log(friends[0])
+console.log(friends[2])
+console.log(friends.length)
+console.log(friends[friends.length - 1])
+
+friends[2] = 'Jay'
+console.log(friends)
+// 
+
+const firstName = 'Jonas'
+const jonas = [firstName, 'Schmedtmann', 2037 - 1991, 'teacher', friends]
+console.log(jonas)
+console.log(jonas.length)
+
+const calcAge = function (birthyear) {
+    return 2037 - birthyear; 
+}
+const years = [1990, 1993, 1803, 2083]
+console.log(calcAge(years))
+
+for (let i = 0; i < years.length; i++) {
+    console.log(calcAge(years[i]))
+}
+
+const age1 = calcAge(years[0]);
+const age2 = calcAge(years[1]);
+const age3 = calcAge(years[years.length - 1]);
+console.log(age1, age2, age3);
+
+const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length - 1])];
+console.log(ages);
