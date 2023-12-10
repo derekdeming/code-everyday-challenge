@@ -255,7 +255,7 @@ const jonas = {
 // objects are unordered
 console.log(jonas) // objects contain key value pairs which are called properties so firstName is a property of the jonas object
 
-*/
+
 
 
 ///////////////////////////////////////
@@ -295,3 +295,47 @@ console.log(jonas)
 
 // Challenge
 console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`);
+
+
+///////////////////////////////////////
+// Object Methods
+
+const jonas = {
+    firstName: 'Jonas',
+    lastName: 'Schmedtmann',
+    birthyear: 1991,
+    age: 2037 - 1991,
+    job: 'teacher',
+    friends: ['Michael', 'Peter', 'Steven'],
+    hasDriversLicense: true,
+
+    // calcAge: function (birthYeah) {
+    //   return 2037 - birthYeah;
+    // }
+
+    // calcAge: function () {
+    //   // console.log(this);
+    //   return 2037 - this.birthYeah;
+    // }
+
+    calcAge: function () {
+        this.age = 2037 - this.birthyear;
+        return this.age;
+    }, // this keyword is the jonas object -- this allows us to access the properties of the object inside the object itself so that we don't have to repeat the object name such as birthyear
+    getSummary: function () {
+        return `${this.firstName} is a ${this.calcAge()}-year old ${this.job}, and he has ${this.hasDriversLicense ? 'a' : 'no'} driver's license.`
+    }
+  };
+console.log(jonas);
+console.log(jonas.calcAge());
+console.log(jonas['calcAge']());
+
+// Challenge
+// "Jonas is a 46-year old teacher, and he has a driver's license"
+console.log(jonas.getSummary());
+
+*/
+
+///////////////////////////////////////
+// Coding Challenge #3
+
