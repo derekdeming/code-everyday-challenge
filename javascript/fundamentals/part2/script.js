@@ -133,7 +133,7 @@ const checkWinner = function (avgDolphins, avgKoalas) {
 }
 
 checkWinner(scoreDolphins, scoreKoalas)
-*/
+
 ///////////////////////////////////////
 // Introduction to Arrays
 const friend1 = 'Michael';
@@ -178,3 +178,41 @@ console.log(age1, age2, age3);
 
 const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length - 1])];
 console.log(ages);
+
+///////////////////////////////////////
+// Basic Array Operations (Methods)
+const friends = ['Michael', 'Steven', 'Peter'];
+console.log(friends) // length == 3
+friends.push('Jay'); // changed / mutated array by adding Jay to the end of the array 
+// push: added the element to the end of the array AND returns the new length of the array as a value 
+console.log(friends)
+console.log(friends.length) // returns 4 
+
+friends.unshift('John') // adds John to the beginning of the array
+console.log(friends)
+// unshift also returns the new length of the array 
+
+friends.pop() // removes the last element of the array
+console.log(friends)
+// pop also returns the element that was removed
+const popped = friends.pop()
+console.log(popped)
+
+friends.shift() // removes the first element of the array
+console.log(friends)
+const firstelement = friends.shift()
+console.log(firstelement)
+
+console.log(friends.indexOf('Steven')) // returns the index of the element in the array
+console.log(friends.indexOf('Bob')) // returns -1 if the element is not in the array
+
+friends.push(23);
+console.log(friends.includes('Steven')); // includes: returns true or false if the element is in the array  
+console.log(friends.includes('Bob')); 
+console.log(friends.includes(23));
+if (friends.includes('Steven')) {
+    console.log('You have a friend called Steven')
+}
+
+*/
+
