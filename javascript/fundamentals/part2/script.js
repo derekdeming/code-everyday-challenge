@@ -334,7 +334,7 @@ console.log(jonas['calcAge']());
 // "Jonas is a 46-year old teacher, and he has a driver's license"
 console.log(jonas.getSummary());
 
-*/
+
 
 ///////////////////////////////////////
 // Coding Challenge #3
@@ -344,26 +344,15 @@ const mark = {
     mass: 78,
     height: 1.69,
     calcBMI: function () {
-        this.bmi = this.mass / this.height ** 2
-        return this.bmi
+      this.bmi = this.mass / (this.height * this.height);
+      return this.bmi;
     }
-} 
+  };
 
-const john = {
+  const john = {
     fullName: 'John Smith',
     mass: 92,
     height: 1.95,
-    calcBMI: function () {
-        this.bmi = this.mass / this.height ** 2
-        return this.bmi
-    }
-}
-
-
-const mark = {
-    fullName: 'Mark Miller',
-    mass: 78,
-    height: 1.69,
     calcBMI: function () {
       this.bmi = this.mass / (this.height * this.height);
       return this.bmi;
@@ -382,3 +371,12 @@ if (mark.bmi > john.bmi) {
 }
 
 console.log(mark.calcBMI(), john.calcBMI())
+
+*/
+
+///////////////////////////////////////
+// Iteration: The for Loop
+// for loop keeps running while condition is TRUE
+
+
+
