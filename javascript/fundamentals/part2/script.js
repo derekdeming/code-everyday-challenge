@@ -445,7 +445,7 @@ for (let i = 0; i < jonas.length; i++) {
     console.log(jonas[i], typeof jonas[i])
 }
 
-*/
+
 
 ///////////////////////////////////////
 // Looping Backwards and Loops in Loops
@@ -470,4 +470,35 @@ for (let exercise = 1; exercise < 4; exercise++) {
     for (let rep = 1; rep < 6; rep++) {
         console.log(`Exercise ${exercise}: Lifting weight repetition ${rep} 🏋️‍♀️`)
     }
+}
+
+*/
+
+// While Loop -- while loop keeps running while condition is TRUE
+
+let rep = 1
+while (rep < 10) {
+    console.log(`Lifting weights repetition ${rep} 🏋️‍♀️`)
+    rep++
+}
+
+// while loop structure: 1) condition, 2) counter update 
+
+let dice = Math.trunc(Math.random() * 6) + 1
+console.log(dice)
+
+while (dice !== 6) {
+    console.log(`You rolled a ${dice}`)
+    dice = Math.trunc(Math.random() * 6) + 1
+    if (dice === 6) console.log('Loop is about to end...')
+let dice = Math.trunc(Math.random() * 6) + 1
+console.log(dice)
+
+let iterations = 0
+while (dice !== 6) {
+    console.log(`You rolled a ${dice}`)
+    dice = Math.trunc(Math.random() * 6) + 1
+    iterations++
+    if (dice === 6) console.log(`Loop ended after ${iterations} iterations.`)
+}
 }
