@@ -536,3 +536,13 @@ const amplitudebug = calcTempAmplitude([3, 5, 1], [9, 4, 5]);
 // console.log(measureKelvin([3, 5, 1], [9, 0, 5]));
 
 // CODING CHALLENGE: 5
+
+function printForecast(arr) {
+  let str = "";
+  for (let i = 0; i < arr.length; i++) {
+    str += `...${arr[i]}°C in ${i + 1} days `;
+  }
+  console.log(str);
+}
+
+printForecast([17, 21, 23]);
