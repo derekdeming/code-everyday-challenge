@@ -476,73 +476,45 @@ for (let exercise = 1; exercise < 4; exercise++) {
 
 // While Loop -- while loop keeps running while condition is TRUE
 
-// let rep = 1;
-// while (rep < 10) {
-//   console.log(`Lifting weights repetition ${rep} 🏋️‍♀️`);
-//   rep++;
-// }
-
-// // while loop structure: 1) condition, 2) counter update
-
-// let dice = Math.trunc(Math.random() * 6) + 1;
-// console.log(dice);
-
-// while (dice !== 6) {
-//   console.log(`You rolled a ${dice}`);
-//   dice = Math.trunc(Math.random() * 6) + 1;
-//   if (dice === 6) console.log("Loop is about to end...");
-//   let dice = Math.trunc(Math.random() * 6) + 1;
-//   console.log(dice);
-
-//   let iterations = 0;
-//   while (dice !== 6) {
-//     console.log(`You rolled a ${dice}`);
-//     dice = Math.trunc(Math.random() * 6) + 1;
-//     iterations++;
-//     if (dice === 6) console.log(`Loop ended after ${iterations} iterations.`);
-//   }
-// }
-
-// Coding Challenge #4
-const measureKelvin = function (t1, t2) {
-  const temps = t1.concat(t2);
-  console.log(temps);
-
-  let max = 0;
-  let min = 0;
-
-  for (let i = 0; i < temps.length; i++) {
-    const curTemp = temps[i];
-    if (typeof curTemp !== "number") continue;
-
-    if (curTemp > max) max = curTemp;
-    if (curTemp < min) min = curTemp;
-  }
-  console.log(max, min);
-  return max - min; // return the difference between the max and min values
-};
-const amplitudebug = calcTempAmplitude([3, 5, 1], [9, 4, 5]);
-//     const measurement = {
-//     type: "temp",
-//     unit: "celsius",
-//     // value: prompt("Degrees celsius:"),
-//     // C) FIX
-//     value: Number(prompt("Degrees celsius:")),
-//   };
-
-//   const kelvin = measurement.value + 273;
-//   return kelvin;
-
-// console.log(measureKelvin([3, 5, 1], [9, 0, 5]));
-
-// CODING CHALLENGE: 5
-
-function printForecast(arr) {
-  let str = "";
-  for (let i = 0; i < arr.length; i++) {
-    str += `...${arr[i]}°C in ${i + 1} days `;
-  }
-  console.log(str);
+let rep = 1
+while (rep < 10) {
+    console.log(`Lifting weights repetition ${rep} 🏋️‍♀️`)
+    rep++
 }
 
-printForecast([17, 21, 23]);
+// while loop structure: 1) condition, 2) counter update 
+
+let dice = Math.trunc(Math.random() * 6) + 1
+console.log(dice)
+
+while (dice !== 6) {
+    console.log(`You rolled a ${dice}`)
+    dice = Math.trunc(Math.random() * 6) + 1
+    if (dice === 6) console.log('Loop is about to end...')
+let dice = Math.trunc(Math.random() * 6) + 1
+console.log(dice)
+
+let iterations = 0
+while (dice !== 6) {
+    console.log(`You rolled a ${dice}`)
+    dice = Math.trunc(Math.random() * 6) + 1
+    iterations++
+    if (dice === 6) console.log(`Loop ended after ${iterations} iterations.`)
+}
+}
+
+// Coding Challenge #4
+
+const calcTip = function (bill) {
+    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+}
+
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52]
+const tips = []
+const totals = []
+
+for (let i = 0; i < bills.length; i++) {
+    const tip = calcTip(bills[i])
+    tips.push(tip)
+    totals.push(tip + bills[i])
+}
