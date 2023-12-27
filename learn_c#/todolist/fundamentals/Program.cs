@@ -3,6 +3,9 @@
 //###################
 //Console.WriteLine(name); //will not compile, because  is not yet declared and initialized
 
+
+// an expression is a piece of code that evaluates to a value 
+
 using System.Windows.Markup;
 
 string name = "Nisha"; //variable initialization at declaration
