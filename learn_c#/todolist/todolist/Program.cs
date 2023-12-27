@@ -1,47 +1,59 @@
-﻿Console.WriteLine("Hello");
+﻿Console.WriteLine("Hello!");
+
+//while (!shallExit) = false;
+//{
+Console.WriteLine();
+Console.WriteLine("What do you want to do?");
 Console.WriteLine("[S]ee all todos");
 Console.WriteLine("[A]dd a todo");
 Console.WriteLine("[R]emove a todo");
 Console.WriteLine("[E]xit");
 
-string userInput = "A"; // explicitly typed variables 
-Console.WriteLine(userInput);
+    var userChoice = Console.ReadLine();
 
-userInput = "ABC"; 
-Console.WriteLine(userInput);
+//    switch (userChoice)
+//    {
+//        case "E":
+//        case "e":
+//            shallExit = true;
+//            break;
+//        case "S":
+//        case "s":
+//            SeeAllTodos();
+//            break;
+//        case "A":
+//        case "a":
+//            AddTodo();
+//            break;
+//        case "R":
+//        case "r":
+//            RemoveTodo();
+//            break;
+//        default:
+//            Console.WriteLine("Invalid choice");
+//            break;
+//    }
+//}
 
-int numberVar; // this is declaration of variable 
-numberVar = 3; // this is intialization of it 
+if (userChoice == "S")
+    {
+        PrintSelectedOption("See all ToDos");
+    }
+else if (userChoice == "A")
+    {
+        PrintSelectedOption("Add a todo");
+    }
+else if (userChoice == "R")
+    {
+        PrintSelectedOption("Remove a todo");
+    }
+else
+    {
+        PrintSelectedOption("Exited program");
+    }
 
-string text = "Hello"; // this is intialization and declaration 
 
-int a = 1, b = 4;
-++a; //this increment by 1 
---b;//this decreases by 1 
-string name, lastname;
-
-Console.WriteLine(a + b);
-name = "derek";
-lastname = "bob";
-Console.WriteLine(name + " " + lastname);
-
-// Naming variable rules:
-// 1. C# keywords cannot be used as variable names 
-// 2. Names can contain letters, digits, and the underscore (_) char, but the first char cannot be a digit 
-// 3. C# is case-sensitive; the names count and Count are two diff vars 
-
-Console.WriteLine("Addition: " + (a + b)); 
-Console.WriteLine("Subtraction: " + (a - b)); 
-Console.WriteLine("Multiplication: " + a * b); 
-Console.WriteLine("Division: " + a / b);
-
-// implicitly typed variables -- need to be declared & initialized at the same time 
-var word = "abc";
-var number1 = 1;
-Console.WriteLine(word);
-Console.WriteLine(number1);
-
-Console.ReadKey();
-
-// addition (+) operator can be used with string and int but subtraction operator (-) cannot compile 
-// multiplication and division have higher precedence than addition and subtraction 
+void PrintSelectedOption(string option)
+{
+    Console.WriteLine("Selected option: " + $"{option}");
+}
