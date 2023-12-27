@@ -170,3 +170,34 @@ bool IsLong(string input)
 string numberAsText = "123";
 int parsedToInt = int.Parse(numberAsText); //would not work if input was, for example, "abc"
 // this is changing data types from an string to an int 
+
+
+
+//###################
+//String interpolation
+//###################
+int a = 4, b = 2, c = 10;
+Console.WriteLine(
+    "First is: " + a + ", second is: " + b + ", third is: " + c);
+
+Console.WriteLine(
+    $"First is: {a}, second is: {b}, third is: {c}");
+
+Console.WriteLine(
+    $"Sum is: {a + b + c}, second is: {b}, third is: {c}");
+
+
+
+//###################
+//String interpolation exercise 
+//###################
+namespace Coding.Exercise
+{
+    public class Exercise
+    {
+        public static string FormatDate(int year, int month, int day)
+        {
+            return $"{year}/{month}/{day}";
+        }
+    }
+}
