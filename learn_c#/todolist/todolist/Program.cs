@@ -37,7 +37,7 @@ Console.WriteLine("[E]xit");
 
 if (userChoice == "S")
     {
-        PrintSelectedOption("See all ToDos");
+        PrintSelectedOption("See all todos");
     }
 else if (userChoice == "A")
     {
