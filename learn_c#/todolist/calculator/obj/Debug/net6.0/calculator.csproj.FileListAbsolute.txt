@@ -1,0 +1,15 @@
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\learn_c#\todolist\calculator\bin\Debug\net6.0\calculator.exe
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\learn_c#\todolist\calculator\bin\Debug\net6.0\calculator.deps.json
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\learn_c#\todolist\calculator\bin\Debug\net6.0\calculator.runtimeconfig.json
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\learn_c#\todolist\calculator\bin\Debug\net6.0\calculator.dll
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\learn_c#\todolist\calculator\bin\Debug\net6.0\calculator.pdb
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\learn_c#\todolist\calculator\obj\Debug\net6.0\calculator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\learn_c#\todolist\calculator\obj\Debug\net6.0\calculator.AssemblyInfoInputs.cache
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\learn_c#\todolist\calculator\obj\Debug\net6.0\calculator.AssemblyInfo.cs
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\learn_c#\todolist\calculator\obj\Debug\net6.0\calculator.csproj.CoreCompileInputs.cache
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\learn_c#\todolist\calculator\obj\Debug\net6.0\calculator.sourcelink.json
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\learn_c#\todolist\calculator\obj\Debug\net6.0\calculator.dll
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\learn_c#\todolist\calculator\obj\Debug\net6.0\refint\calculator.dll
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\learn_c#\todolist\calculator\obj\Debug\net6.0\calculator.pdb
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\learn_c#\todolist\calculator\obj\Debug\net6.0\calculator.genruntimeconfig.cache
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\learn_c#\todolist\calculator\obj\Debug\net6.0\ref\calculator.dll
