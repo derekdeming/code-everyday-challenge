@@ -529,3 +529,39 @@ bool IsWordPresentInCollection(string[] words8, string wordToBeChecked)
     return false;
 }
 
+
+
+
+//###################
+//CODING EXERCISE: 
+//###################
+int FindMax(int[,] numbers)
+{
+    int height = numbers.GetLength(0);
+    if (height == 0)
+    {
+        return -1;
+    }
+    int width = numbers.GetLength(1);
+    if (width == 0)
+    {
+        return -1;
+    }
+
+    int max = numbers[0, 0];
+
+    for(var i =0; i < height; ++i)
+    {
+        for(var j =0; j < width; ++j)
+        {
+            var number = numbers[i, j];
+            if (number>max)
+            {
+                max = number;
+
+            }
+        }
+    }
+    return max;
+}
+
