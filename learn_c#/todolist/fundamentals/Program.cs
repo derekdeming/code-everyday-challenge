@@ -358,7 +358,8 @@ int userNumber;
 do
 {
     Console.WriteLine(
-        "Enter a number larger than 10: ");
+        "Enter a number larger than 10: "
+        );
     var input = Console.ReadLine();
     if (input == "stop")
     {
@@ -380,4 +381,53 @@ for (int i = 0; i < 20; i++)
         continue;
     }
     Console.WriteLine(i);
+}
+
+//###################
+//Nested loops
+//###################
+
+for (int i = 0; i < 4; i++)
+{
+    for (int j = 0; j < 3; j++)
+    {
+        for (int k = 0; k < 3; k++)
+        {
+            Console.WriteLine($"i is {i}, j is {j}");
+        }
+    }
+}
+
+// avoid nested loops, especially 3x nested loops 
+// move performance-heavy code outside the loop or to outer loops 
+
+
+//###################
+//Arrays -- collections of fixed size of the same type, so once an array is created, its size cannot be changed 
+// ex: Array (type: string[]) --> "abc"
+// default value to an initialized array is 0 
+// use the carrot symbol (^) to index from the end operator (replicating [array.Length - 1]
+//###################
+var numbers = new int[3];
+Console.WriteLine("Element at index 0 is " + numbers[0]);
+Console.WriteLine("Element at index 1 is " + numbers[1]);
+Console.WriteLine("Element at index 2 is " + numbers[2]);
+
+numbers[0] = 5; numbers[1] = 6; numbers[2] = 7;
+Console.WriteLine("Element at index 0 is " + numbers[0]);
+Console.WriteLine("Element at index 1 is " + numbers[1]);
+Console.WriteLine("Element at index 2 is " + numbers[2]);
+
+var numbers2 = new int[] {1, 2, 3, 4, 5,  6};
+numbers2[2] = 10;
+numbers2[3] = 11;
+var firstFromEnd1 = numbers2[numbers2.Length - 1];
+var firstFromEnd2 = numbers2[^1]; //this is the same as above 
+var secondFromEnd1 = numbers2[numbers2.Length - 2];
+var secondFromEnd2 = numbers2[^2];
+
+int sumOfNumbers = 0;
+for (int i = 0; i < numbers2.Length; i++)
+{
+    sumOfNumbers += numbers2[i];
 }
