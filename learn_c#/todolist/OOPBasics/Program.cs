@@ -50,13 +50,19 @@ Console.WriteLine("day of the year is " + internationalPizzaDay24.DayOfYear);
  * 9. public vars are n amed like so: Width or Height (Capitalized first letter) 
  */
 
+using System.Drawing;
+
 var rectangle1 = new Rectangle(5, 10);
 var rectangle2 = new Rectangle(50, 20);
+var calculator = new ShapesMeasurementsCalculator();
 
 Console.WriteLine("Width is " + rectangle1.Width);
 Console.WriteLine("Width is " + rectangle1.Height);
 Console.WriteLine("Width is " + rectangle2.Width);
 Console.WriteLine("Width is " + rectangle2.Height);
+
+Console.WriteLine("Area is " + calculator.CalculateRectangleCircumference(rectangle1));
+Console.WriteLine("Circumference is " + calculator.CalculateRectangleArea(rectangle1));
 class Rectangle
 {
     public int Width;
@@ -67,15 +73,18 @@ class Rectangle
         Width = width;
         Height = height; 
     }
+}
 
-    int CalculateCircumference()
+class ShapesMeasurementsCalculator
+{
+    public int CalculateRectangleCircumference(Rectangle rectangle)
     {
-        return 2 * Width + 2 * Height;
+        return 2 * rectangle.Width + 2 * rectangle.Height;
     }
 
-    int CalculateArea()
+    public int CalculateRectangleArea(Rectangle rectangle)
     {
-        return Width * Height;
+        return rectangle.Width * rectangle.Height;
     }
 }
 
@@ -83,6 +92,14 @@ class Rectangle
 // virtually all C# code must belong to some class 
 // name of a method should always start with a verb 
 
+
+/* ENCAPSULATION -- bundling data with methods that operate on this data (in single class) 
+ * 
+ * Differences between ENCAPSULATION VS DATA HIDING: 
+ * 1. Encap: bundling data with methods that operate on it in the same class 
+ * 2. Data Hiding: making fields private instead of public 
+ * 
+ */
 
 //Console.WriteLine("Height is " + rectangle1.GetHeight());
 //Console.WriteLine("Area is " + rectangle1.CalculateArea());
