@@ -1,59 +1,131 @@
-﻿Console.WriteLine("Hello!");
+﻿var todos = new List<string>();
 
-//while (!shallExit) = false;
-//{
-Console.WriteLine();
-Console.WriteLine("What do you want to do?");
-Console.WriteLine("[S]ee all todos");
-Console.WriteLine("[A]dd a todo");
-Console.WriteLine("[R]emove a todo");
-Console.WriteLine("[E]xit");
+Console.WriteLine("Hello!");
 
-var userChoice = Console.ReadLine();
+bool shallExit = false;
 
-switch (userChoice)
+while (!shallExit)
 {
-    case "E":
-    case "e":
-        PrintSelectedOption("Exiting program");
-        break;
-    case "S":
-    case "s":
-        PrintSelectedOption("See all todos");
-        break;
-    case "A":
-    case "a":
-        PrintSelectedOption("Add a todo");
-        break;
-    case "R":
-    case "r":
-        PrintSelectedOption("Remove a todo");
-        break;
-    default:
-        Console.WriteLine("Invalid choice");
-        break;
+    Console.WriteLine();
+    Console.WriteLine("What do you want to do?");
+    Console.WriteLine("[S]ee all todos");
+    Console.WriteLine("[A]dd a todo");
+    Console.WriteLine("[R]emove a todo");
+    Console.WriteLine("[E]xit");
+
+    var userChoice = Console.ReadLine();
+
+    switch (userChoice)
+    {
+        case "E":
+        case "e":
+            shallExit = true;
+            break;
+        case "S":
+        case "s":
+            SeeAllTodos();
+            break;
+        case "A":
+        case "a":
+            AddToDo();
+            break;
+        case "R":
+        case "r":
+            RemoveTodo();
+            break;
+        default:
+            Console.WriteLine("Invalid choice");
+            break;
+    }
 }
-//}
 
-//if (userChoice == "S")
-//    {
-//        PrintSelectedOption("See all todos");
-//    }
-//else if (userChoice == "A")
-//    {
-//        PrintSelectedOption("Add a todo");
-//    }
-//else if (userChoice == "R")
-//    {
-//        PrintSelectedOption("Remove a todo");
-//    }
-//else
-//    {
-//        PrintSelectedOption("Exited program");
-//    }
+Console.ReadLine();
 
-
-void PrintSelectedOption(string option)
+void SeeAllTodos()
 {
-    Console.WriteLine("Selected option: " + $"{option}");
+    if (todos.Count == 0)
+    {
+        ShowNoTodosMessage();
+        return;
+    }
+    for (int i = 0; i < todos.Count; i++)
+    {
+        Console.WriteLine($"{i + 1}. {todos[i]}");
+    }
+}
+
+void AddToDo()
+{
+    string description;
+    do
+    {
+        Console.WriteLine("Enter the TODO description: ");
+        description = Console.ReadLine();
+    }
+    while (!IsDescriptionValid(description));
+    todos.Add(description);
+}
+
+bool IsDescriptionValid(string description)
+{
+    if (description == "")
+    {
+        Console.WriteLine("The description cannot be empty");
+        return false;
+    }
+    if (todos.Contains(description))
+    {
+        Console.WriteLine("the description must be unique");
+        return false;
+    }
+    return true;
+}
+
+
+void RemoveTodo()
+{
+    if(todos.Count ==0)
+    {
+        ShowNoTodosMessage();
+        return;
+    }
+    int index; 
+    do
+    {
+        Console.WriteLine("Select the index of the TODO you want to remove");
+        SeeAllTodos();
+    } while (!TryReadIndex(out index));
+    RemoveTodoAtIndex(index - 1);
+}
+
+bool TryReadIndex (out int index)
+{
+    var userInput = Console.ReadLine();
+    if (userInput == "")
+    {
+        index = 0;
+        Console.WriteLine("Selected index cannot be empty");
+        return false;
+    }
+    if (int.TryParse(userInput, out index) && 
+            index >= 1 && 
+            index <= todos.Count)
+            {
+                return true;
+            }
+    Console.WriteLine("the given index is not valid");
+    return false;
+}
+
+void RemoveTodoAtIndex(int index)
+{
+    var todoToBeRemoved = todos[index];
+    todos.RemoveAt(index);
+    Console.WriteLine("TODO removed: " + todoToBeRemoved);
+}
+
+
+void ShowNoTodosMessage()
+{
+    Console.WriteLine("No TODOs have been added yet");
 }
