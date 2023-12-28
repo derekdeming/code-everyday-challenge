@@ -10,7 +10,7 @@
  *      4. inheritance 
  */
 
-
+/*
 var internationalPizzaDay23 = new DateTime(2023, 2, 9);
 // DateTime(year, month, day, hour, minute, second) 
 Console.WriteLine("year is " + internationalPizzaDay23.Year);
@@ -27,6 +27,7 @@ Console.WriteLine("month is " + internationalPizzaDay24.Month);
 Console.WriteLine("day is " + internationalPizzaDay24.Day);
 Console.WriteLine("day of the week is " + internationalPizzaDay24.DayOfWeek);
 Console.WriteLine("day of the year is " + internationalPizzaDay24.DayOfYear);
+*/
 
 
 /* ABSTRACTION - means that classes expose only essential data and methods and hide the underlying details 
@@ -66,31 +67,21 @@ class Rectangle
         Width = width;
         Height = height; 
     }
-}
 
-//####################
-//## CODING EXERCISE
-//####################
-
-// HOTEL BOOKING CLASS 
-public class HotelBooking
-{
-    public string GuestName;
-    public DateTime StartDate;
-    public DateTime EndDate;
-
-    public HotelBooking(
-        string guestName,
-        DateTime startDate,
-        int lengthOfStayInDays
-        )
+    int CalculateCircumference()
     {
-        GuestName = guestName;
-        StartDate = startDate;
-        EndDate = startDate.AddDays( lengthOfStayInDays ); 
+        return 2 * Width + 2 * Height;
+    }
 
+    int CalculateArea()
+    {
+        return Width * Height;
     }
 }
+
+
+// virtually all C# code must belong to some class 
+// name of a method should always start with a verb 
 
 
 //Console.WriteLine("Height is " + rectangle1.GetHeight());
