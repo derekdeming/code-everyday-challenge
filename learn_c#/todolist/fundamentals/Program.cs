@@ -431,3 +431,14 @@ for (int i = 0; i < numbers2.Length; i++)
 {
     sumOfNumbers += numbers2[i];
 }
+
+string BuildHelloString()
+{
+    var letters = new char[] { 'h', 'e', 'l', 'l', 'o' };
+    var result = "";
+    for (int i = 0; i < letters.Length; ++i)
+    {
+        result += letters[i];
+    }
+    return result;
+}
