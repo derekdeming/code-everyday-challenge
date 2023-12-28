@@ -628,3 +628,33 @@ List<int> GetOnlyPositive(int[] numbers, out int countOfNonPositive)
     return result; 
 }
 
+//###################
+//Out parameter
+// -- how to parse a string to an int without the risk of a runtime error 
+// -- using the TryParse method 
+
+/* the Parse method has an issue with it because it causes
+ a runtime error if the type passed through is not correct so we will
+ use the TryParse method instead */
+
+//###################
+
+
+bool isParsingSuccessful;
+
+do
+{
+    Console.WriteLine("Enter a nubmer: ");
+    var userInput1 = Console.ReadLine();
+    isParsingSuccessful = int.TryParse(userInput1, out int number9);
+    if (isParsingSuccessful)
+    {
+        Console.WriteLine("Parsing was successful " + number9);
+    }
+    else
+    {
+        {
+            Console.WriteLine("Parsing was not successful");
+        }
+    }
+} while (!isParsingSuccessful);
