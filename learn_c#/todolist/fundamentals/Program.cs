@@ -194,13 +194,190 @@ Console.WriteLine(
 //###################
 //String interpolation exercise 
 //###################
-namespace Coding.Exercise
-{
-    public class Exercise
-    {
-        public static string FormatDate(int year, int month, int day)
+string FormatDate(int year, int month, int day)
         {
             return $"{year}/{month}/{day}";
         }
+
+
+
+//###################
+//Switch statement
+//###################
+//See 1_TodoList project for more about switch
+//###################
+//Char
+//###################
+char ConvertPointsToGrade(int points)
+{
+    switch (points)
+    {
+        case 10:
+        case 9:
+            return 'A';
+        case 8:
+        case 7:
+        case 6:
+            return 'B';
+        case 5:
+        case 4:
+        case 3:
+            return 'C';
+        case 2:
+        case 1:
+            return 'D';
+        case 0:
+            return 'E';
+        default:
+            return '!';
     }
+}
+
+//###################
+//Switch statement -- exercise 
+//###################
+string DescribeDay(int dayNumber)
+        {
+            switch (dayNumber)
+            {
+                case 1:
+                case 2:
+                case 3:
+                case 4:
+                case 5:
+                    return "Working day";
+                    break;
+                case 6:
+                case 7:
+                    return "Weekend";
+                    break;
+                default:
+                    return "Invalid day number";
+                    break;
+            }
+        }
+
+
+
+// 'a' - a char representing the letter a 
+// "a" - a string of length 1, consisting of one letter 
+
+
+//###################
+//While loop
+//###################
+var numberWhileLoop = 0; 
+while (numberWhileLoop < 10)
+{
+    numberWhileLoop++;
+    Console.WriteLine("Number is " + numberWhileLoop);
+}
+
+Console.WriteLine("the loop is finished");
+
+var someText = "hello there";
+while (someText.Length < 20) ;
+{
+    someText += 'a';
+    Console.WriteLine(someText) ;
+}
+Console.WriteLine("the loop is finished");
+
+// WHILE LOOP EXERCISE
+int CalculateSumOfNumbersBetween(int firstNumber, int lastNumber)
+{
+    int currentNumber = firstNumber;
+    int sum = 0;
+    while (currentNumber <= lastNumber)
+    {
+        sum += currentNumber;
+        currentNumber++;
+    }
+    return sum;
+}
+
+
+//###################
+//Do-while loop -- CODE IS EXECUTED BEFORE THE CONDITION IN THE WHILE LOOP so the code will be executed at least once 
+//###################
+string userInputLong;
+do
+{
+    Console.WriteLine(
+        "Enter input longer than 10 letters");
+    userInputLong = Console.ReadLine();
+} while (userInputLong.Length <= 10);
+
+string word;
+do
+{
+    Console.WriteLine("Enter a word longer than 10 letters");
+    word = Console.ReadLine();
+}
+while (word.Length <= 10);
+Console.WriteLine("the loop is finished");
+
+
+//###################
+//For loop
+//###################
+for (int i = 0; i < 10; i+=2)
+{
+    Console.WriteLine("Loop run " + i);
+}
+for  (int i = 10;  i >= 5; --i)
+{
+    Console.WriteLine("Loop run " + i);
+}
+Console.WriteLine("the loop is finished ");
+
+int Factorial(int number)
+{
+    var result = 1; 
+    for (int i = 1; i <= number; ++i)
+    {
+        result *= i;
+    }
+    return result;
+}
+
+
+//###################
+//Break and continue
+//###################
+for (int i = 0; i < 100;  ++i)
+{
+    if (i > 25)
+    {
+        break;
+    }
+    Console.WriteLine("loop run " + i);
+}
+
+int userNumber; 
+do
+{
+    Console.WriteLine(
+        "Enter a number larger than 10: ");
+    var input = Console.ReadLine();
+    if (input == "stop")
+    {
+        break;
+    }
+    bool isParsableToInt = input.All(char.IsDigit);
+    if (!isParsableToInt)
+    {
+        userNumber = 0;
+        continue;
+    }
+    userNumber = int.Parse(input);
+} while (userNumber < 10);
+
+for (int i = 0; i < 20; i++)
+{
+    if (i % 3  == 0)
+    {
+        continue;
+    }
+    Console.WriteLine(i);
 }
