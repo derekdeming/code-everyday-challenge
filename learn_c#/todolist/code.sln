@@ -14,6 +14,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "calculator", "calculator\calculator.csproj", "{CC611C41-1CD6-48F0-9857-4CCB4D53A1CA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOPBasics", "OOPBasics\OOPBasics.csproj", "{37354922-2B22-457B-B12B-26299D6DB934}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +34,10 @@ Global
 		{CC611C41-1CD6-48F0-9857-4CCB4D53A1CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC611C41-1CD6-48F0-9857-4CCB4D53A1CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC611C41-1CD6-48F0-9857-4CCB4D53A1CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37354922-2B22-457B-B12B-26299D6DB934}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37354922-2B22-457B-B12B-26299D6DB934}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37354922-2B22-457B-B12B-26299D6DB934}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37354922-2B22-457B-B12B-26299D6DB934}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
