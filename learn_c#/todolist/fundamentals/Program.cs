@@ -595,3 +595,36 @@ List<string> GetOnlyUpperCaseWords(List<string> words)
     }
     return result;
 }
+
+
+//###################
+//Out parameter -- option of how to return 2 values from one method 
+// when we pass a variable as a parameter to a method, a copy of this variable is created 
+//###################
+
+var numbers3 = new[] { 10, -8, 2, 12, -17 };
+int nonPositiveCount;
+var onlyPositive = GetOnlyPositive(numbers, out nonPositiveCount);
+foreach(var positiveNumber in onlyPositive)
+{
+    Console.WriteLine(positiveNumber);
+}
+
+List<int> GetOnlyPositive(int[] numbers, out int countOfNonPositive)
+{
+    countOfNonPositive = 0;
+    var result = new List<int>();
+    foreach(int number in numbers)
+    {
+        if (number>0)
+        {
+            result.Add(number);
+        }
+        else
+        {
+            countOfNonPositive++;
+        }
+    }
+    return result; 
+}
+
