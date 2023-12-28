@@ -476,3 +476,19 @@ for (var i =  0; i < height; i++)
         Console.WriteLine($"element is {letters[i,j]}");
     }
 }
+
+
+//###################
+//Foreach loop
+// there is no index for this 
+//###################
+
+var words = new string[] { "one", "two", "three" };
+foreach (var word in words)
+{
+    Console.WriteLine(word);
+}
+
+//###################
+//Lists
+//###################
