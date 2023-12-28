@@ -484,11 +484,34 @@ for (var i =  0; i < height; i++)
 //###################
 
 var words = new string[] { "one", "two", "three" };
-foreach (var word in words)
+foreach (var word6 in words)
 {
-    Console.WriteLine(word);
+    Console.WriteLine(word6);
 }
 
 //###################
 //Lists
+// size is not fixed and can be modified after intialized and declared -- it is dynamic 
 //###################
+List<string> words2 = new List<string>();
+Console.WriteLine("Count of elements is " + words2.Count);
+
+var word3 = new List<string>
+{
+    "one",
+    "two",
+};
+Console.WriteLine("count of the elements is " + word3.Count);
+foreach (var word4 in word3)
+{
+    Console.WriteLine(word4);
+}
+word3.Add("three");
+word3.Remove("one");
+word3.Add("four");
+word3.AddRange(new[] { "four", "five" });
+word3.RemoveAt(0);
+word3.RemoveAt(1);
+var indexOfFive = word3.IndexOf("one"); // returns the index of the first occurrence specified 
+bool containsOne = word3.Contains("one");
+word3.Clear();
