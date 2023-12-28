@@ -123,9 +123,9 @@ else
 if (userInput.Length == 0)
 {
     Console.WriteLine("Empty choice");
-    var word = "ABC";
+    var word7 = "ABC";
     int someNumber = 5;
-    if (word.Length > 0)
+    if (word7.Length > 0)
     {
         Console.WriteLine(someNumber); //someNumber is available here
     }
@@ -515,3 +515,17 @@ word3.RemoveAt(1);
 var indexOfFive = word3.IndexOf("one"); // returns the index of the first occurrence specified 
 bool containsOne = word3.Contains("one");
 word3.Clear();
+
+
+bool IsWordPresentInCollection(string[] words8, string wordToBeChecked)
+{
+    for (var i = 0; i < words8.Length; ++i)
+    {
+        if (words8[i] == wordToBeChecked)
+        {
+            return true;
+        }
+    }
+    return false;
+}
+
