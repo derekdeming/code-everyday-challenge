@@ -50,32 +50,39 @@ Console.WriteLine("day of the year is " + internationalPizzaDay24.DayOfYear);
  * 9. public vars are n amed like so: Width or Height (Capitalized first letter) 
  */
 
+/* fields -- variable like, single access modifier, no separate getter and setter, cannot be overridden in derived classes, should always be private
+ * properties -- method like, separate access modifiers for getter and setter, getter or setter may be removed, can be overridden in derived classes, can safely be public 
+ * 
+ * 
+ */
+
 using System.Drawing;
 
 var rectangle1 = new Rectangle(5, 10);
 var rectangle2 = new Rectangle(50, 20);
-var calculator = new ShapesMeasurementsCalculator();
+//var calculator = new ShapesMeasurementsCalculator();
 
 Console.WriteLine("Width is " + rectangle1.Width);
-Console.WriteLine("Width is " + rectangle1._height);
+Console.WriteLine("Width is " + rectangle1.GetHeight());
 Console.WriteLine("Width is " + rectangle2.Width);
-Console.WriteLine("Width is " + rectangle2._height);
+Console.WriteLine("Width is " + rectangle2.GetHeight());
 
-Console.WriteLine("Area is " + calculator.CalculateRectangleCircumference(rectangle1));
-Console.WriteLine("Circumference is " + calculator.CalculateRectangleArea(rectangle1));
+//Console.WriteLine("Area is " + calculator.CalculateRectangleCircumference(rectangle1));
+//Console.WriteLine("Circumference is " + calculator.CalculateRectangleArea(rectangle1));
 class Rectangle
 {
-    const int NumberOfSides = 4;
-    readonly int NumberOfSidesReadonly;
-    public readonly int Width;
-    private int _height;
+    //const fields are implicitly static
+    public const int NumberOfSides = 4;
 
     public Rectangle (int width, int height)
     {
-        NumberOfSidesReadonly = 4;
         Width = GetLengthOrDefault(width, nameof(Width));
         _height = GetLengthOrDefault(height, nameof(_height)); 
     }
+
+    //readonly property - can only be set in the constructor
+    public int Width { get; }
+    private int _height;
 
     public int GetHeight() => _height;
     
