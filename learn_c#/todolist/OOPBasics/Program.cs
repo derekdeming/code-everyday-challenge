@@ -77,15 +77,10 @@ class Rectangle
 
 class ShapesMeasurementsCalculator
 {
-    public int CalculateRectangleCircumference(Rectangle rectangle)
-    {
-        return 2 * rectangle.Width + 2 * rectangle.Height;
-    }
+    // using expression bodied method here bc both result in a return of a value -- can only use it when one expression or statement is present
+    public int CalculateRectangleCircumference(Rectangle rectangle) => 2 * rectangle.Width + 2 * rectangle.Height;
 
-    public int CalculateRectangleArea(Rectangle rectangle)
-    {
-        return rectangle.Width * rectangle.Height;
-    }
+    public int CalculateRectangleArea(Rectangle rectangle) => rectangle.Width * rectangle.Height;
 }
 
 
@@ -98,7 +93,10 @@ class ShapesMeasurementsCalculator
  * Differences between ENCAPSULATION VS DATA HIDING: 
  * 1. Encap: bundling data with methods that operate on it in the same class 
  * 2. Data Hiding: making fields private instead of public 
- * 
+ *
+ *
+ * We cannot have two methods with the same names and parameters, but a different return type, in a single class.
+
  */
 
 
@@ -142,3 +140,14 @@ class MedicalAppointment
             _date.Day + daysToAdd);
     }
 }
+
+
+/*Expression-bodied-methods -- used to make methods shorter
+ * 
+ * Statement -- something that does not evaluate to a value (e.g., Console.WriteLine("hi") or if(condition){}
+ * Expression -- something that evaluates to a value -- 1 + 3 or GetText() 
+ * 
+ * 
+ * 
+ * 
+ */
