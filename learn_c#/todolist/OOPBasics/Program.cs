@@ -57,31 +57,63 @@ var rectangle2 = new Rectangle(50, 20);
 var calculator = new ShapesMeasurementsCalculator();
 
 Console.WriteLine("Width is " + rectangle1.Width);
-Console.WriteLine("Width is " + rectangle1.Height);
+Console.WriteLine("Width is " + rectangle1._height);
 Console.WriteLine("Width is " + rectangle2.Width);
-Console.WriteLine("Width is " + rectangle2.Height);
+Console.WriteLine("Width is " + rectangle2._height);
 
 Console.WriteLine("Area is " + calculator.CalculateRectangleCircumference(rectangle1));
 Console.WriteLine("Circumference is " + calculator.CalculateRectangleArea(rectangle1));
 class Rectangle
 {
-    public int Width;
-    public int Height;
+    const int NumberOfSides = 4;
+    readonly int NumberOfSidesReadonly;
+    public readonly int Width;
+    private int _height;
 
     public Rectangle (int width, int height)
     {
-        Width = width;
-        Height = height; 
+        NumberOfSidesReadonly = 4;
+        Width = GetLengthOrDefault(width, nameof(Width));
+        _height = GetLengthOrDefault(height, nameof(_height)); 
     }
-}
 
-class ShapesMeasurementsCalculator
-{
+    public int GetHeight() => _height;
+    
+    // a readonly field can only be assigned at the declaration or in the constructor 
+
+    public void SetHeight(int value)
+    {
+        if (value> 0)
+        {
+            _height = value;
+        }
+    }
+
+    private int GetLengthOrDefault(int length, string name)
+    {
+        // const modifier can be applied to both variables and fields. Those variables and 
+        // fields must be assigned at declaration and can never be modified afterward. 
+        // They must be given a compile-time constant value 
+        const int defaultValueIfNonPositive = 1;
+        if (length <= 0)
+        {
+            Console.WriteLine($"{name} must be positive number");
+            return defaultValueIfNonPositive;
+        }
+        return length;
+    }
+
     // using expression bodied method here bc both result in a return of a value -- can only use it when one expression or statement is present
-    public int CalculateRectangleCircumference(Rectangle rectangle) => 2 * rectangle.Width + 2 * rectangle.Height;
+    //could not be made static as they use the state of an instance (width and height)
+    public int CalculateRectangleCircumference(Rectangle rectangle) => 2 * rectangle.Width + 2 * rectangle._height;
 
-    public int CalculateRectangleArea(Rectangle rectangle) => rectangle.Width * rectangle.Height;
+    public int CalculateRectangleArea(Rectangle rectangle) => rectangle.Width * rectangle._height;
+
 }
+
+
+
+    
 
 
 // virtually all C# code must belong to some class 
@@ -98,6 +130,13 @@ class ShapesMeasurementsCalculator
  * We cannot have two methods with the same names and parameters, but a different return type, in a single class.
 
  */
+
+
+
+//var appointmentTwoWeeksFromNow = new MedicalAppointment("Bob Smith", 14);
+//var appointmentOneWeekFromNow = new MedicalAppointment("Margaret Smith");
+//var appointmentUnknownPatient = new MedicalAppointment();
+//var nameOnly = new MedicalAppointment("Name only");
 
 class MedicalAppointmentPrinter
 {
