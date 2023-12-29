@@ -57,7 +57,6 @@ Console.WriteLine("day of the year is " + internationalPizzaDay24.DayOfYear);
  */
 
 using System.Drawing;
-
 var rectangle1 = new Rectangle(5, 10);
 var rectangle2 = new Rectangle(50, 20);
 //var calculator = new ShapesMeasurementsCalculator();
@@ -66,6 +65,10 @@ Console.WriteLine("Width is " + rectangle1.Width);
 Console.WriteLine("Width is " + rectangle1.GetHeight());
 Console.WriteLine("Width is " + rectangle2.Width);
 Console.WriteLine("Width is " + rectangle2.GetHeight());
+
+Console.WriteLine(rectangle1.Description);
+Console.WriteLine(rectangle1.LongDescription);
+
 
 //Console.WriteLine("Area is " + calculator.CalculateRectangleCircumference(rectangle1));
 //Console.WriteLine("Circumference is " + calculator.CalculateRectangleArea(rectangle1));
@@ -115,6 +118,23 @@ class Rectangle
     public int CalculateRectangleCircumference(Rectangle rectangle) => 2 * rectangle.Width + 2 * rectangle._height;
 
     public int CalculateRectangleArea(Rectangle rectangle) => rectangle.Width * rectangle._height;
+
+    public string Description => $"A rectangle with width {Width} " + $"and height {_height}";
+
+    public string LongDescription
+    {
+        get
+        {
+            var result = ""; 
+            for (int i = 0; i < 100000; ++i)
+            {
+                result += i; 
+            }
+            return result;
+        }
+    }
+
+
 
 }
 
@@ -199,7 +219,7 @@ class MedicalAppointment
 }
 
 
-/*Expression-bodied-methods -- used to make methods shorter
+/*Expression-bodied-methods -- used to make methods shorter by using => 
  * 
  * Statement -- something that does not evaluate to a value (e.g., Console.WriteLine("hi") or if(condition){}
  * Expression -- something that evaluates to a value -- 1 + 3 or GetText() 
@@ -208,3 +228,4 @@ class MedicalAppointment
  * 
  * 
  */
+
