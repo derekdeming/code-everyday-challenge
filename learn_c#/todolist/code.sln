@@ -16,6 +16,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "calculator", "calculator\ca
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOPBasics", "OOPBasics\OOPBasics.csproj", "{37354922-2B22-457B-B12B-26299D6DB934}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SingleResponsibilityPrinciple", "SingleResponsibilityPrinciple\SingleResponsibilityPrinciple.csproj", "{16C64E17-BBC1-43A5-A2F2-64996E747625}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "diceRollGame", "diceRollGame\diceRollGame.csproj", "{FFEE60AA-62CE-4BF4-B807-6CA5D42E9D35}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +42,14 @@ Global
 		{37354922-2B22-457B-B12B-26299D6DB934}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{37354922-2B22-457B-B12B-26299D6DB934}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{37354922-2B22-457B-B12B-26299D6DB934}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16C64E17-BBC1-43A5-A2F2-64996E747625}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16C64E17-BBC1-43A5-A2F2-64996E747625}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16C64E17-BBC1-43A5-A2F2-64996E747625}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16C64E17-BBC1-43A5-A2F2-64996E747625}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFEE60AA-62CE-4BF4-B807-6CA5D42E9D35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFEE60AA-62CE-4BF4-B807-6CA5D42E9D35}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFEE60AA-62CE-4BF4-B807-6CA5D42E9D35}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFEE60AA-62CE-4BF4-B807-6CA5D42E9D35}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
