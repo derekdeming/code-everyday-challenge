@@ -1,0 +1,10 @@
+﻿namespace diceRollGame.Game
+{
+    public enum GameResult
+    {
+        Victory,
+        Loss
+    }
+}
+
+
