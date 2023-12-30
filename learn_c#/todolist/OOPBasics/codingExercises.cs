@@ -191,7 +191,17 @@ namespace OOPBasics
     //####################
     //## CODING EXERCISE
     //####################
-
+    public static class StringsTransformator
+    {
+        public static string TransformSeparators(
+            string input, 
+            string originalSeparator, 
+            string targetSeparator)
+        {
+            var stringPieces = input.Split(originalSeparator);
+            return string.Join(targetSeparator, stringPieces);
+        }
+    }
 
 
 

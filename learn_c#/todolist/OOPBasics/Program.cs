@@ -72,6 +72,8 @@ Console.WriteLine(rectangle1.LongDescription);
 var anotherCalculator = new Calculator();
 Console.WriteLine($"1*2 is {anotherCalculator.Multiply(1,2)}");
 
+Console.WriteLine("count of rectangle objects is " + Rectangle.CountOfInstances);
+
 // Static methods belong to a class as a whole, not to a specific instance. 
 // static methods cannot use the instance data (values of fields or returned by properties)
 // a static class cannot be instantiated; it only works as a container for methods 
@@ -96,10 +98,21 @@ class Rectangle // stateful ( has state - fields )
     //const fields are implicitly static
     public const int NumberOfSides = 4;
 
+    // a static property belonging to the class as a whole 
+    public static int CountOfInstances { get; private set; }
+
+    private static DateTime _firstUsed;
+
+    static Rectangle()
+    {
+        _firstUsed = DateTime.Now;
+    }
+
     public Rectangle (int width, int height)
     {
         Width = GetLengthOrDefault(width, nameof(Width));
-        _height = GetLengthOrDefault(height, nameof(_height)); 
+        _height = GetLengthOrDefault(height, nameof(_height));
+        ++CountOfInstances;
     }
 
     //readonly property - can only be set in the constructor
@@ -253,3 +266,10 @@ class MedicalAppointment
  * 
  */
 
+
+class SomeClass
+{
+    private static int _someField = 1;
+
+    public static string AsString() => "Value of this field is  " +_someField;
+}
