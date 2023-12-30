@@ -69,10 +69,29 @@ Console.WriteLine("Width is " + rectangle2.GetHeight());
 Console.WriteLine(rectangle1.Description);
 Console.WriteLine(rectangle1.LongDescription);
 
+var anotherCalculator = new Calculator();
+Console.WriteLine($"1*2 is {anotherCalculator.Multiply(1,2)}");
+
+// Static methods belong to a class as a whole, not to a specific instance. 
+// static methods cannot use the instance data (values of fields or returned by properties)
+// a static class cannot be instantiated; it only works as a container for methods 
+// a static class can only contain static methods 
+// non-static classes can contain static methods 
+// if a private method doesn't use instance data, make it static 
+// all const fields are implicitly static 
+class Calculator  // stateless (has no state) 
+{
+    public static int Add(int a, int b) => a + b;
+
+    public int Subtract( int a, int b ) => a - b;
+
+    public int Multiply ( int a , int b ) => a * b;
+}
+
 
 //Console.WriteLine("Area is " + calculator.CalculateRectangleCircumference(rectangle1));
 //Console.WriteLine("Circumference is " + calculator.CalculateRectangleArea(rectangle1));
-class Rectangle
+class Rectangle // stateful ( has state - fields )
 {
     //const fields are implicitly static
     public const int NumberOfSides = 4;
@@ -119,6 +138,7 @@ class Rectangle
 
     public int CalculateRectangleArea(Rectangle rectangle) => rectangle.Width * rectangle._height;
 
+    // a get-only, expression-bodied property 
     public string Description => $"A rectangle with width {Width} " + $"and height {_height}";
 
     public string LongDescription
@@ -133,6 +153,10 @@ class Rectangle
             return result;
         }
     }
+
+    //a static method, not using any state of an instance
+    public static string DescribeGenerally() =>
+        $"A plane figure with four straight sides and four right angles.";
 
 
 
