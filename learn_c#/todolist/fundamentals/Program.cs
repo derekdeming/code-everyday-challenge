@@ -321,6 +321,7 @@ Console.WriteLine("the loop is finished");
 //###################
 //For loop
 //###################
+// for (initialization statement; condition to evaluate; updating action) 
 for (int i = 0; i < 10; i+=2)
 {
     Console.WriteLine("Loop run " + i);
