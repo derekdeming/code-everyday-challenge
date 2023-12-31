@@ -346,6 +346,36 @@ int Factorial(int number)
 //###################
 //Break and continue
 //###################
+/* break - forces the loop to terminate immediately without reevaluating the loops condition
+ * . This lets us escape a loop we no longer want to keep running. The loops condition is not reevaluated so it means we can leave the loop
+ * while its condition is still technically true
+ * 
+ * continue - will cause the loop to stop running the current pass through the loop but 
+ * will advance to the next pass, recheck the condition, and keep looping if the condition holds. 
+ * You can think of 'continue' as "skip the rest of this pass through the loop and continue to the next pass" 
+ * 
+ * 
+ */
+
+while (true) // this loops condition is true and would never finish without a break. But 
+    // if the user types "quit" or "exit" the break statement is encounterer. 
+    // if the user enters 12 then that continue statement is reached. Instead of displaying the 
+    // text about the number being good, it tells the user to pick another one 
+{
+    Console.WriteLine("think of a number and type it here: ");
+    string input = Console.ReadLine();
+
+    if (input == "quit" || input == "exit")
+        break;
+    int number644 = Convert.ToInt32(input);
+    if (number644 == 12)
+    {
+        Console.WriteLine("I don't like that number. Pick another one");
+        continue; 
+    }
+    Console.WriteLine($"I like {number644}. It's the one before {number644 + 1}!");
+} 
+
 for (int i = 0; i < 100;  ++i)
 {
     if (i > 25)
