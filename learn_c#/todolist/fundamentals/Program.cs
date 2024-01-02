@@ -417,6 +417,26 @@ for (int i = 0; i < 20; i++)
 //###################
 //Nested loops
 //###################
+// - are common when you need to do something with every combination of two sets of things 
+// ex: basic multiplication table, multiplying the numbers 1 through 10 against the same set of numbers 
+
+for (int aa =1; aa <= 10;  aa++)
+    for (int bb  = 1; bb <= 10; bb++)
+        Console.WriteLine($"{aa} * {bb} = {aa*bb}");
+
+
+
+// this code displays a grid of *'s based on the number of rows and columns dictated by totalRows and totalColumns
+int totalRows = 5;
+int totalCols = 10;
+
+for (int currentRow = 1; currentRow <= totalRows; currentRow++)
+{
+    for (int currentCol = 1; currentCol <= totalCols; currentCol++)
+        Console.Write("*");
+    Console.WriteLine();
+}
+
 
 for (int i = 0; i < 4; i++)
 {
