@@ -22,5 +22,7 @@
  * private methods cannot be inherited 
  * 
  * protected members can be used in the derived classes but they cannot be used outside 
+ * 
+ * virtual methods or properties may be overridden by the inheriting types (virtual and override keywords) 
  */ 
 
