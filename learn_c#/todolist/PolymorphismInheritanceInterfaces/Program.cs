@@ -24,5 +24,20 @@
  * protected members can be used in the derived classes but they cannot be used outside 
  * 
  * virtual methods or properties may be overridden by the inheriting types (virtual and override keywords) 
- */ 
+ * 
+ * 
+ * Conversion -
+ * 1. implicit conversion -- doesn't require cast expression. occurs when conversion is safe and lossless (example: integer to decimal)  
+ * 2. explicit conversion -- requires cast expression (there is trimming of the data happening which is not safe) ex: decimal to int 
+ *  explicit example: decimal c = 10.01m int d = (int)c; 
+ *  
+ *  Implicit conversion does not require any special syntax, unlike the explicit conversion, which requires writing the type name in parenthesis.
+ *  
+ *  
+ */
 
+
+
+
+// double variable = 10.01 - less precise but much faster than decimal
+// decimal variable = 10.01m - very precise 
