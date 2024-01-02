@@ -10,7 +10,7 @@ namespace PolymorphismInheritanceInterfaces.Animals
     {
         public List<int> GetCountsOfAnimalLegs()
         {
-            var animals = new List<Animals>
+            var animals = new List<Animal>
             {
                 new Lion(),
                 new Tiger(),
@@ -43,7 +43,7 @@ namespace PolymorphismInheritanceInterfaces.Animals
     }
     public class Duck : Animal
     {
-        public override int NumberOfLegs { get; } = 2; 
+        public override int NumberOfLegs { get; } = 2;
     }
 
     public class Spider : Animal
@@ -51,4 +51,66 @@ namespace PolymorphismInheritanceInterfaces.Animals
         public override int NumberOfLegs { get; } = 8;
 
     }
+
+    public class VirtualMethodsStringsProcessorClasses
+    {
+
+        public List<string> ProcessAll(List<string> words)
+        {
+            var stringsProcessors = new List<StringsProcessor>
+            {
+                new StringsTrimmingProcessor(),
+                new StringsUppercaseProcessor()
+            };
+
+            List<string> result = words;
+            foreach (var stringsProcessor in stringsProcessors)
+            {
+                result = stringsProcessor.Process(result);
+            }
+            return result;
+        }
+    }
+
+    public class StringsProcessor
+    {
+        public List<string> Process(
+            List<string> strings)
+        {
+            var result = new List<string>();
+            foreach (var text in strings)
+            {
+                result.Add(ProcessSingle(text));
+            }
+            return result;
+        }
+
+        protected virtual string ProcessSingle(string input) => input;
+    }
+
+    public class StringsTrimmingProcessor : StringsProcessor
+    {
+        protected override string ProcessSingle(string input) => input.Substring(0, input.Length / 2);
+    }
+
+    public class StringsUppercaseProcessor : StringsProcessor
+    {
+        protected override string ProcessSingle(string input) =>
+        input.ToUpper();
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
