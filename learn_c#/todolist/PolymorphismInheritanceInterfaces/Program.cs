@@ -41,3 +41,24 @@
 
 // double variable = 10.01 - less precise but much faster than decimal
 // decimal variable = 10.01m - very precise 
+
+// "is" operator and null object - NumericTypesDescriber class coding exercise
+public static class NumericTypesDescriber
+{
+    public static string Describe(object someObject)
+    {
+        if (someObject is int asInt)
+        {
+            return "int of value " + asInt;
+        }
+        if (someObject is double asDouble)
+        {
+            return "double of value " + asDouble;
+        }
+        if (someObject is decimal asDecimal)
+        {
+            return "Decimal of value " + asDecimal;
+        }
+        return null;
+    }
+}
