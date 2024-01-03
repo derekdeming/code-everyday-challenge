@@ -49,11 +49,11 @@ public static class NumericTypesDescriber
     {
         if (someObject is int asInt)
         {
-            return "int of value " + asInt;
+            return "Int of value " + asInt;
         }
         if (someObject is double asDouble)
         {
-            return "double of value " + asDouble;
+            return "Double of value " + asDouble;
         }
         if (someObject is decimal asDecimal)
         {
