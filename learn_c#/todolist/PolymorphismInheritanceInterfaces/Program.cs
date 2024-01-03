@@ -62,3 +62,9 @@ public static class NumericTypesDescriber
         return null;
     }
 }
+
+/* 'as' operator -- will give null if cast fails so it only works to cast to nullable types. 
+ * cannot cast to int types because they cannot be null 
+ * 
+ * 
+ */
