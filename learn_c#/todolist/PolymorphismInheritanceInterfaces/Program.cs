@@ -69,31 +69,80 @@ public static class NumericTypesDescriber
  * 
  */
 
-public static class NumbericTypesDescriber
-{
-    public static string Describe(object someObject)
-    {
-        if (someObject is int asInt)
-        {
-            return "Int of value " + asInt
-        }
-        if ((someObject is double asDouble) || (someObject is decimal asDecimal))
-        {
-            return "Double and decimal as " + asDouble + asDecimal;
-        }
-        return null;
-    }
-}
+//public static class NumericTypesDescriber
+//{
+//    public static string Describe(object someObject)
+//    {
+//        if (someObject is int asInt)
+//        {
+//            return "Int of value " + asInt;
+//        }
+//        if (someObject is double asDouble)
+//        {
+//            return "Double of value " + asDouble;
+//        }
+//        if (someObject is decimal asDecimal)
+//        {
+//            return "Decimal of value " + asDecimal;
+//        }
+//        return null;
+//    }
+//}
 
-public static class AbstractMethodsShapeExercise
+public static class AbstractMethodsShapesExercise
 {
     public static List<double> GetShapesAreas(List<Shape> shapes)
     {
         var result = new List<double>();
+
         foreach (var shape in shapes)
         {
-            result.Add(shape.Area);
+            result.Add(shape.CalculateArea());
         }
+
         return result;
     }
+}
+
+public abstract class Shape
+{
+    public abstract double CalculateArea();
+}
+
+public class Square : Shape
+{
+    public double Side { get; }
+
+    public Square(double side)
+    {
+        Side = side;
+    }
+
+    public override double CalculateArea() => Side * Side;
+}
+
+public class Rectangle : Shape
+{
+    public double Width { get; }
+    public double Height { get; }
+
+    public Rectangle(double width, double height)
+    {
+        Width = width;
+        Height = height;
+    }
+
+    public override double CalculateArea() => Width * Height;
+}
+
+public class Circle : Shape
+{
+    public double Radius { get; }
+
+    public Circle(double radius)
+    {
+        Radius = radius;
+    }
+
+    public override double CalculateArea() => Math.PI * Radius * Radius;
 }
