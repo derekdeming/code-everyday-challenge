@@ -68,3 +68,32 @@ public static class NumericTypesDescriber
  * 
  * 
  */
+
+public static class NumbericTypesDescriber
+{
+    public static string Describe(object someObject)
+    {
+        if (someObject is int asInt)
+        {
+            return "Int of value " + asInt
+        }
+        if ((someObject is double asDouble) || (someObject is decimal asDecimal))
+        {
+            return "Double and decimal as " + asDouble + asDecimal;
+        }
+        return null;
+    }
+}
+
+public static class AbstractMethodsShapeExercise
+{
+    public static List<double> GetShapesAreas(List<Shape> shapes)
+    {
+        var result = new List<double>();
+        foreach (var shape in shapes)
+        {
+            result.Add(shape.Area);
+        }
+        return result;
+    }
+}
