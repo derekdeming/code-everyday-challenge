@@ -182,3 +182,23 @@ public static class InterfacesApplyingMutipleTransformationsToNumberExercise
         return result;
     }
 }
+
+public interface INumericTransformation
+{
+    int Transform(int number);
+}
+
+public class By1Incrementer : INumericTransformation
+{
+    public int Transform(int number) => ++number;
+}
+
+public class By2Multiplier : INumericTransformation
+{
+    public int Transform(int number) => number * 2;
+}
+
+public class ToPowerOf2Raiser : INumericTransformation
+{
+    public int Transform(int number) => number * number;
+}
