@@ -804,10 +804,13 @@ Console.WriteLine(uu != vv); // false
 
 
 // instances of a class are created with the 'new' keyword. The 'Score()' thing refers to a special method called a constructor used to get new isntances ready for use 
-Score best = new Score();
+Score best = new Score("me", 100, 3);
+Score worst = new Score();
+Score hardest = new Score("me", 100, 5, "legendary");
 best.name = "r2d2";
 best.points = 12340;
 best.level = 14;
+
 
 if (best.EarnedStar())
     Console.WriteLine("You earned a star");
@@ -815,11 +818,39 @@ class Score
 {
     // these vars are not the same thing as local variables or parameters. They are fields or instance vars which are local to the method 
     // fields are variables created inside the object's memory on the heap 
-    public string name; 
+    public string _name; 
+    public int _points;
+    public int _level;
+    public string _difficulty;
+    public string name;
     public int points;
     public int level;
+    public string difficulty;
 
-    public bool EarnedStar() => (points / level) > 1000; // method which returns a bool and is public 
+    //adding constructor  -- use naming convention _ prior in fields so that the parameters in the constructor can have the same name OR you can use the 'this' keyword which refers to the object you're calling from 
+    public Score(string name, int points, int level)
+    {
+        _name = name; 
+        _points = points;
+        _level = level;
+    }
+
+    public Score(string name, int points, int level, string difficulty)
+    {
+        this.name = name;
+        this.points = points;
+        this.level = level;
+        this.difficulty = difficulty;
+    }
+
+    public Score()
+    {
+        _name = "Unknown";
+        _points = 0;
+        _level = 1;
+    }
+
+    public bool EarnedStar() => (_points / _level) > 1000; // method which returns a bool and is public 
     // this method has access to its own local vars and parameters and also any vars defined in the class itself 
 
     // ENCAPSULATION -- bundle up data and the operations on that data into a well-defined cohesive unit (like a class) 
@@ -840,6 +871,9 @@ if (game1.points > game2.points)
 else
     Console.WriteLine("game2 scored more points");
 
+//CONSTRUCTORS -- they are special methods that run when an object comes to life to ensure it begins life in a good state 
+//     1. constructors must use the same name as the class, and they cannot list a return type 
+//     2. constructors are allowed to have parameters, just like methods -- it lets the outside world provide the intial values for some fields 
 
 
 
