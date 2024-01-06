@@ -709,3 +709,29 @@ do
         }
     }
 } while (!isParsingSuccessful);
+
+
+
+// TUPLES 
+(string Name, int, int) score = ("r2-d2", 12333, 14);
+void DisplayScore((string Name, int Points, int Level) score)
+{
+    Console.WriteLine($"Name: {score.Name} Level: {score.Level} Score: {score.Points}");
+}
+// parameters cannot use var so we are obligated to list the tuple item types in this case 
+
+//(string Name, int Points, int Level) GetScore() => ("r2d2", 12340, 15); // you can return a tuple from a method by placing its consistuent parts in parentheses in the spot where we list the return type 
+
+//var score2 = GetScore();
+//Console.WriteLine($"Name: {score2.Name} Level: {score2.Level} Score: {score2.Points}");
+
+
+(string One, int Twol, int Three) score3 = GetScore();
+DisplayScore(score3);
+
+(string N, int P, int L) GetScore() => ("r2d2", 1234, 15);
+
+void DisplayScore2((string Name, int Points, int Level) score3)
+{
+    Console.WriteLine($"Name: {score3.Name} Level: {score3.Level} Score: {score3.Points}");
+}

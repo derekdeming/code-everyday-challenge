@@ -202,10 +202,5 @@ public class ToPowerOf2Raiser : INumericTransformation
 {
     public int Transform(int number) => number * number;
 }
-enum Season { Winter, Spring, Summer, Fall }
-Season current = Season.Summer;
 
-if (current == Season.Summer || current == Season.Winter)
-    Console.WriteLine("Happy Solstice") ;
-else
-    Console.WriteLine("Happy equinox");
+  
