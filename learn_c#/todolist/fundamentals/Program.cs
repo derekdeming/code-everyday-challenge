@@ -825,6 +825,21 @@ class Score
     // ENCAPSULATION -- bundle up data and the operations on that data into a well-defined cohesive unit (like a class) 
 }
 
+Score game1 = new Score();
+game1.name = "game";
+game1.points = 1231;
+game1.level = 14;
+
+Score game2 = new Score();
+game2.name = "game2";
+game2.points = 1232;
+game2.level = 14;
+
+if (game1.points > game2.points)
+    Console.WriteLine($"{game1.name} scored more points by {game1.points - game2.points} points");
+else
+    Console.WriteLine("game2 scored more points");
+
 
 
 
