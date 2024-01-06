@@ -6,6 +6,8 @@
 
 // an expression is a piece of code that evaluates to a value 
 
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Runtime.CompilerServices;
 using System.Windows.Markup;
 
 string name = "Nisha"; //variable initialization at declaration
@@ -735,3 +737,55 @@ void DisplayScore2((string Name, int Points, int Level) score3)
 {
     Console.WriteLine($"Name: {score3.Name} Level: {score3.Level} Score: {score3.Points}");
 }
+
+enum TileType { Grass, Water, Rock }
+var tile = (Row: 2, Column: 4, Type: TileType.Grass);
+
+var matrix = (M11: 1, M12: 0, M13: 0, M14: 0,
+              M21: 1, M22: 0, M23: 0, M24: 0,
+              M31: 1, M32: 0, M33: 0, M34: 0,
+              M41: 1, M42: 0, M43: 0, M44: 0);
+
+(string Name, int Points, int Level)[] CreateHighScores()
+{
+    return new (string, int, int)[3]
+    {
+        ("r2d2", 1234, 15),
+        ("c-3po", 8453, 9),
+        ("Gonk", -1, 1),
+    };
+}
+
+var score4 = (Name: "me", Points: 1, Level: 3);
+string playerName = score4.Name;
+
+// deconstructing tuples 
+string name3;
+int points;
+int level;
+(name3, points, level) = score4;
+Console.WriteLine( $"{name3} reached level {level} with {points} points");
+// list each of the variables to store the deconstructed tuple in parentheses 
+// (name3, points, level) copies each item in the tuple 'score' to their respective variables 
+
+double x = 4;
+double y = 5;
+(x, y) = (y, x); // this swaps the contents of two variables 
+//tuple deconstruction demands that the variables on the left match the tuple in count and types so if there is a var we don't need or want we can just throw it away using '_' with no type like this:
+(string name3, int points, _) =  score4;
+
+// _ is a discard variable 
+
+// tuples and equality -- tuples are value types so we can check for equality 
+// two tuple values are considered equal if they have the same number of items, the corresponding items are the same types, and if each item is equal to the corresponding item in the other tuple 
+(int, int) u = (1, 2);
+(int, int) v = (1, 2);
+Console.WriteLine(u == v); // true 
+Console.WriteLine(u != v); // false 
+
+
+var uu = (X: 1, Y: 2);
+var vv = (U: 1, V: 2);
+Console.WriteLine(uu == vv); // true -- this shows that the names of the tuple elements do not matter bc they are different however the values matter bc they are the same 
+Console.WriteLine(uu != vv); // false 
+
