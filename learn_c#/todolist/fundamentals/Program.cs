@@ -789,3 +789,57 @@ var vv = (U: 1, V: 2);
 Console.WriteLine(uu == vv); // true -- this shows that the names of the tuple elements do not matter bc they are different however the values matter bc they are the same 
 Console.WriteLine(uu != vv); // false 
 
+
+
+// CLASSES
+/*objects -- a thing in your software, responsible for a slice of the entire program, containing data and methods, which define what info the oject must remember and the capabilities it can perform when requested 
+ * 
+ * c# objects are categorized into classes -- establishing vars and methods of any object belonging to the class (blueprint)
+ * 
+ * objects that fit into a class is known as an instance of that class 
+ * 
+ * 
+ * 
+ */
+
+
+// instances of a class are created with the 'new' keyword. The 'Score()' thing refers to a special method called a constructor used to get new isntances ready for use 
+Score best = new Score();
+best.name = "r2d2";
+best.points = 12340;
+best.level = 14;
+
+if (best.EarnedStar())
+    Console.WriteLine("You earned a star");
+class Score
+{
+    // these vars are not the same thing as local variables or parameters. They are fields or instance vars which are local to the method 
+    // fields are variables created inside the object's memory on the heap 
+    public string name; 
+    public int points;
+    public int level;
+
+    public bool EarnedStar() => (points / level) > 1000; // method which returns a bool and is public 
+    // this method has access to its own local vars and parameters and also any vars defined in the class itself 
+
+    // ENCAPSULATION -- bundle up data and the operations on that data into a well-defined cohesive unit (like a class) 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
