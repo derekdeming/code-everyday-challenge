@@ -902,36 +902,28 @@ class Score2
 // INFORMATION HIDING -- only the object itself should directly access its data 
 Rectangle rectangle1 = new Rectangle(4, 3);
 //rectangle1._area = 200; // anyone can just change the value of the area so we need to handle public vs private 
-Console.WriteLine(rectangle1.GetArea); // now the fields are private and we cannot use / see this  
+rectangle1.SetWidth(6);
+Console.WriteLine(rectangle1.GetArea()); // now the fields are private and we cannot use / see this  
 class Rectangle
 {
     private float _width;
     private float _height;
-    private float _area;
+    //private float _area;
 
     public Rectangle(float width, float height)
     {
         _width = width;
         _height = height;
-        _area = width * height;
+        //_area = width * height;
     }
 
     public float GetWidth() => _width;
     public float GetHeight() => _height;
-    public float GetArea() => _area;
+    public float GetArea() => _width * _height;
 
-    public void SetWidth(float value)
-    {
-        _width = value; 
-        _area = _width * _height;
+    public void SetWidth(float value) => _width = value;
+    public void SetHeight(float value) => _height = value;
 
-    }
-
-    public void SetHeight(float value)
-    {
-        _height = value;
-        _area = _height * _width;
-    }
 }
 
 
@@ -940,6 +932,21 @@ class Rectangle
 // private keyword gives the member private accessibility -- usable only within the class itself 
 // instead of direct access to our fields we provide controlled access through methods 
 
+
+/* WHEN TO USE PUBLIC VS PRIVATE 
+ * 
+ * a class should protect its data. fields almost always be private (rare exceptions exist) 
+ * 
+ * things should always be as inaccessible as possible while allowing the class to fulfill its role in the system
+ * 
+ * 
+ */
+
+/* ABSTRACTION -- the outside world does not need to know each object or class's inner workings and can deal with it as an abstract concept. 
+ * Abstraction allows the inner workings to change without affecting the outside world 
+ * 
+ * 
+ */
 
 
 
