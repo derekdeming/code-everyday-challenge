@@ -899,6 +899,36 @@ class Score2
 
 
 
+// INFORMATION HIDING -- only the object itself should directly access its data 
+Rectangle rectangle1 = new Rectangle(4, 3);
+class Rectangle
+{
+    public float _width;
+    public float _height;
+    public float _area;
+
+    public Rectangle(float width, float height)
+    {
+        _width = width;
+        _height = height;
+        _area = width * height;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
