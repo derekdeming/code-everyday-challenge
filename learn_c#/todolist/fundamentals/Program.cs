@@ -901,11 +901,13 @@ class Score2
 
 // INFORMATION HIDING -- only the object itself should directly access its data 
 Rectangle rectangle1 = new Rectangle(4, 3);
+//rectangle1._area = 200; // anyone can just change the value of the area so we need to handle public vs private 
+Console.WriteLine(rectangle1.GetArea); // now the fields are private and we cannot use / see this  
 class Rectangle
 {
-    public float _width;
-    public float _height;
-    public float _area;
+    private float _width;
+    private float _height;
+    private float _area;
 
     public Rectangle(float width, float height)
     {
@@ -913,7 +915,30 @@ class Rectangle
         _height = height;
         _area = width * height;
     }
+
+    public float GetWidth() => _width;
+    public float GetHeight() => _height;
+    public float GetArea() => _area;
+
+    public void SetWidth(float value)
+    {
+        _width = value; 
+        _area = _width * _height;
+
+    }
+
+    public void SetHeight(float value)
+    {
+        _height = value;
+        _area = _height * _width;
+    }
 }
+
+
+// ACCESSIBILITY MODIFIERS -- these change the access level of a thing they are applied to 
+// public keyword gives the member public accessibility -- usable anywhere 
+// private keyword gives the member private accessibility -- usable only within the class itself 
+// instead of direct access to our fields we provide controlled access through methods 
 
 
 
