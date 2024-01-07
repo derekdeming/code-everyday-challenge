@@ -900,31 +900,31 @@ class Score2
 
 
 // INFORMATION HIDING -- only the object itself should directly access its data 
-Rectangle rectangle1 = new Rectangle(4, 3);
-//rectangle1._area = 200; // anyone can just change the value of the area so we need to handle public vs private 
-rectangle1.SetWidth(6);
-Console.WriteLine(rectangle1.GetArea()); // now the fields are private and we cannot use / see this  
-class Rectangle
-{
-    private float _width;
-    private float _height;
-    //private float _area;
+//Rectangle rectangle1 = new Rectangle(4, 3);
+////rectangle1._area = 200; // anyone can just change the value of the area so we need to handle public vs private 
+//rectangle1.SetWidth(6);
+//Console.WriteLine(rectangle1.GetArea()); // now the fields are private and we cannot use / see this  
+//class Rectangle
+//{
+//    private float _width;
+//    private float _height;
+//    //private float _area;
 
-    public Rectangle(float width, float height)
-    {
-        _width = width;
-        _height = height;
-        //_area = width * height;
-    }
+//    public Rectangle(float width, float height)
+//    {
+//        _width = width;
+//        _height = height;
+//        //_area = width * height;
+//    }
 
-    public float GetWidth() => _width;
-    public float GetHeight() => _height;
-    public float GetArea() => _width * _height;
+//    public float GetWidth() => _width;
+//    public float GetHeight() => _height;
+//    public float GetArea() => _width * _height;
 
-    public void SetWidth(float value) => _width = value;
-    public void SetHeight(float value) => _height = value;
+//    public void SetWidth(float value) => _width = value;
+//    public void SetHeight(float value) => _height = value;
 
-}
+//}
 
 
 // ACCESSIBILITY MODIFIERS -- these change the access level of a thing they are applied to 
@@ -944,10 +944,57 @@ class Rectangle
 
 /* ABSTRACTION -- the outside world does not need to know each object or class's inner workings and can deal with it as an abstract concept. 
  * Abstraction allows the inner workings to change without affecting the outside world 
- * 
- * 
  */
 
+/* Diff between PUBLIC and INTERNAL
+ * Public - can be accessed anywhere, including in other projects 
+ * Internal - can only be used in the project it is defined in 
+ */
+
+
+/* PROPERTIES --pairs a getter and setter under a shared name with field-like access 
+ * -- they are another member we can put in a class. They have their own accessibility level 
+ * -- each property has a type 
+ * 
+ * GETTER (get) -- is required to return a value of the same type as the property 
+ * SETTER (set) -- has access to the special value variable in its body
+ * 
+ * properties don't require both getters and setters. You can have a get-only or set-only property
+ * 
+ * get-only -- property makes sense for something that can't be changed from the outside 
+ * 
+ * get and set do not need the same level of accessibility. Get can be public and set can be private for example 
+ */
+
+Rectangle rectangle1 = new Rectangle(4, 3);
+//rectangle1._area = 200; // anyone can just change the value of the area so we need to handle public vs private 
+rectangle1.Width(6);
+Console.WriteLine(rectangle1.GetArea()); // now the fields are private and we cannot use / see this  
+class Rectangle
+{
+    private float _width;
+    private float _height;
+    //private float _area;
+
+    public Rectangle(float width, float height)
+    {
+        _width = width;
+        _height = height;
+        //_area = width * height;
+    }
+
+    public float Width
+    {
+        get => _width;
+        set => _width = value;
+    }
+    public float GetHeight() => _height;
+    public float GetArea() => _width * _height;
+
+
+    public void SetHeight(float value) => _height = value;
+
+}
 
 
 
