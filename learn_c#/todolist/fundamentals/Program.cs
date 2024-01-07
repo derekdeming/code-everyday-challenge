@@ -827,7 +827,7 @@ class Score
     public int level;
     public string difficulty;
 
-    //adding constructor  -- use naming convention _ prior in fields so that the parameters in the constructor can have the same name OR you can use the 'this' keyword which refers to the object you're calling from 
+    //adding constructor  -- use naming convention _ prior in fields so that the parameters in the constructor can have the same name OR you can use the 'this' keyword which refers to the object you're calling from when the fields and parameters have the same exact name 
     public Score(string name, int points, int level)
     {
         _name = name; 
@@ -877,7 +877,23 @@ else
 
 
 
+class Score2
+{
+    public string _name;
+    public int _points;
+    public int _level;
 
+    public Score2() : this("Unknown", 0, 1)
+    {
+    }
+
+    public Score2(string name, int points, int level)
+    {
+        _name = name;
+        _points = points;
+        _level = level;
+    }
+}
 
 
 
