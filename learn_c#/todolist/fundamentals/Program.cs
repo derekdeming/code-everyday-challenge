@@ -1089,21 +1089,21 @@ public class SomeClass
 // but you can mark members of a class w/ 'static' keyword to detach them from individual instances and tie it to the class itself
 
 // static field or var -- these are useful for defining vars that affect every instance in the class 
-public class Score3
-{
-    private static readonly int PointThreshold = 1000;
-    private static readonly int LevelThreshold2 = 4;
+//public class Score3
+//{
+//    private static readonly int PointThreshold = 1000;
+//    private static readonly int LevelThreshold2 = 4;
 
-    public bool IsWorthyOfHighScoreTable()
-    {
-        if (Point > PointThreshold) return false;
-        if (Level < LevelThreshold2) return false;
-                return true;
-    }
+//    public bool IsWorthyOfHighScoreTable()
+//    {
+//        if (Point > PointThreshold) return false;
+//        if (Level < LevelThreshold2) return false;
+//                return true;
+//    }
 
-    // if a field is static, public and NOT read-only, it creates global state 
-    // global state is data that can be changed and used anywhere in your program 
-}
+//    // if a field is static, public and NOT read-only, it creates global state 
+//    // global state is data that can be changed and used anywhere in your program 
+//}
 
 
 // static properties 
@@ -1113,24 +1113,67 @@ public class Score3
 
 // static methods -- it is not tied to a single instance, so it cannot refer to any non-static (instance) fields, properties, or methods
 // they are most used for helper methods that provide some sort of service related to the class they are placed it but that is not tired directly to a single instance
-public static int CountForPlayer(string playerName, Score[] scores)
+//public static int CountForPlayer(string playerName, Score[] scores)
+//{
+//    int count = 0;
+//    foreach (Score score in scores)
+//        if (score.name == playerName) count ++ ;
+//    return count;
+//}
+
+
+//public static Rectangle CreateSquare(float size) => new Rectangle(size, size);
+//Rectangle rectangle = Rectangle.CreateSquare(2);
+
+
+// NULL REFERENCES 
+/*reference type vars like string, arrays and classes don't store their data directly in the variable. The var holds a reference and the data lives on the heap somewhere 
+ * 
+ * special reference: NULL REFERENCE -- helpful when it is possible for there to be no data available for something
+ * 
+ */
+string name44 = null;
+// NULL OR NOT? -- if null is allowed you will want to check it for null before using its members (methods, properties, fields, etc) 
+// any reference type var can either have a ? at the end or not. A ? means that it may legitimately contain a null value 
+string? name45 = Console.ReadLine(); // can return null or any legit string instance (without the ?, this means null is not an option) 
+if (name45 != null)
+    Console.WriteLine("the name is not null");
+
+// two ways to integrate null checks 
+private string? GetTopPlayerName()
 {
-    int count = 0;
-    foreach (Score score in scores)
-        if (score.name == playerName) count ++ ;
-    return count;
+    return _scoreManager?.GetScores()?[0]?.Name;
+}
+
+private string? GetTopPlayerName()
+{
+    if (_scoreManager == null) return null;
+
+    Score[]? scores = _scoreManager.GetScores();
+    if (scores == null) return null;
+
+    Score? topScore = scores[0];
+    if (topScore == null) return null;
+
+    return topScore.name;
+}
+
+// null coalescing operator : ?? -- takes an expression that might be null and provide a value or expression to use as a fallback if it is 
+private string GetTopPlayerName() // no longer needs null check 
+{
+    return _scoreManager?.GetScores()?[0]?.Name ?? "(Not found)"; // if the code before the ?? evaluates to null, then the fallback value of "(not found)" will be used instead 
 }
 
 
-public static Rectangle CreateSquare(float size) => new Rectangle(size, size);
-Rectangle rectangle = Rectangle.CreateSquare(2);
+private string GetTopPlayerName() // no longer needs null check 
+{
+    return _scoreManager?.GetScores()?[0]?.Name;
+    name ??="(Not found)";
+    return name;
+}
 
-
-
-
-
-
-
+// null-forgiving operator: ! (same as boolean not) this tells the compiler " i know this looks like a potential null problem, but it wont be, trust me" 
+string message = MightReturnNullIfNegative(+10)!;
 
 
 
