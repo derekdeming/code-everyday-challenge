@@ -1077,8 +1077,53 @@ Circle2 circle3 = new Circle2 { X = 1, Y  = 2 };
 
 
 
+// STATIC 
+public class SomeClass
+{
+    private int _number;
+    public int Number => _number;
+}
+
+// each instance of SomeClass has its own _number field, and calling methods or properties like the Number property is associated w/ specific instances and their individual date 
+// each instance is independent of the others, other than sharing the same class def 
+// but you can mark members of a class w/ 'static' keyword to detach them from individual instances and tie it to the class itself
+
+// static field or var -- these are useful for defining vars that affect every instance in the class 
+public class Score3
+{
+    private static readonly int PointThreshold = 1000;
+    private static readonly int LevelThreshold2 = 4;
+
+    public bool IsWorthyOfHighScoreTable()
+    {
+        if (Point > PointThreshold) return false;
+        if (Level < LevelThreshold2) return false;
+                return true;
+    }
+
+    // if a field is static, public and NOT read-only, it creates global state 
+    // global state is data that can be changed and used anywhere in your program 
+}
 
 
+// static properties 
+/* they can use static fields as their backing fields or you can make them auto-properties
+ * 
+ */
+
+// static methods -- it is not tied to a single instance, so it cannot refer to any non-static (instance) fields, properties, or methods
+// they are most used for helper methods that provide some sort of service related to the class they are placed it but that is not tired directly to a single instance
+public static int CountForPlayer(string playerName, Score[] scores)
+{
+    int count = 0;
+    foreach (Score score in scores)
+        if (score.name == playerName) count ++ ;
+    return count;
+}
+
+
+public static Rectangle CreateSquare(float size) => new Rectangle(size, size);
+Rectangle rectangle = Rectangle.CreateSquare(2);
 
 
 
