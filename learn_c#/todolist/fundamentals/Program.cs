@@ -968,8 +968,8 @@ class Score2
 
 Rectangle rectangle1 = new Rectangle(4, 3);
 //rectangle1._area = 200; // anyone can just change the value of the area so we need to handle public vs private 
-rectangle1.Width(6);
-Console.WriteLine(rectangle1.GetArea()); // now the fields are private and we cannot use / see this  
+rectangle1.Width = 6;
+Console.WriteLine(rectangle1.Area); // now the fields are private and we cannot use / see this  
 class Rectangle
 {
     private float _width;
@@ -988,8 +988,13 @@ class Rectangle
         get => _width;
         set => _width = value;
     }
-    public float GetHeight() => _height;
-    public float GetArea() => _width * _height;
+
+    public float Height
+    {
+        get => _height;
+        set => _height = value;
+    }
+    public float Area => _width * _height;
 
 
     public void SetHeight(float value) => _height = value;
