@@ -1139,44 +1139,67 @@ string? name45 = Console.ReadLine(); // can return null or any legit string inst
 if (name45 != null)
     Console.WriteLine("the name is not null");
 
-// two ways to integrate null checks 
-private string? GetTopPlayerName()
-{
-    return _scoreManager?.GetScores()?[0]?.Name;
-}
+//// two ways to integrate null checks 
+//private string? GetTopPlayerName()
+//{
+//    return _scoreManager?.GetScores()?[0]?.Name;
+//}
 
-private string? GetTopPlayerName()
-{
-    if (_scoreManager == null) return null;
+//private string? GetTopPlayerName()
+//{
+//    if (_scoreManager == null) return null;
 
-    Score[]? scores = _scoreManager.GetScores();
-    if (scores == null) return null;
+//    Score[]? scores = _scoreManager.GetScores();
+//    if (scores == null) return null;
 
-    Score? topScore = scores[0];
-    if (topScore == null) return null;
+//    Score? topScore = scores[0];
+//    if (topScore == null) return null;
 
-    return topScore.name;
-}
+//    return topScore.name;
+//}
 
-// null coalescing operator : ?? -- takes an expression that might be null and provide a value or expression to use as a fallback if it is 
-private string GetTopPlayerName() // no longer needs null check 
-{
-    return _scoreManager?.GetScores()?[0]?.Name ?? "(Not found)"; // if the code before the ?? evaluates to null, then the fallback value of "(not found)" will be used instead 
-}
-
-
-private string GetTopPlayerName() // no longer needs null check 
-{
-    return _scoreManager?.GetScores()?[0]?.Name;
-    name ??="(Not found)";
-    return name;
-}
-
-// null-forgiving operator: ! (same as boolean not) this tells the compiler " i know this looks like a potential null problem, but it wont be, trust me" 
-string message = MightReturnNullIfNegative(+10)!;
+//// null coalescing operator : ?? -- takes an expression that might be null and provide a value or expression to use as a fallback if it is 
+//private string GetTopPlayerName() // no longer needs null check 
+//{
+//    return _scoreManager?.GetScores()?[0]?.Name ?? "(Not found)"; // if the code before the ?? evaluates to null, then the fallback value of "(not found)" will be used instead 
+//}
 
 
+//private string GetTopPlayerName() // no longer needs null check 
+//{
+//    return _scoreManager?.GetScores()?[0]?.Name;
+//    name ??="(Not found)";
+//    return name;
+//}
 
+//// null-forgiving operator: ! (same as boolean not) this tells the compiler " i know this looks like a potential null problem, but it wont be, trust me" 
+//string message = MightReturnNullIfNegative(+10)!;
+
+
+//OBJECT-ORIENTED DESIGN 
+/* possible first step - identify the concepts and jobs that the requirements reveal // concepts that apear in the requirements will often lead to classes of objects in design 
+ * 
+ * jobs / tasks in requirements will lead to responsibilities in the software
+ * 
+ * highlight the noun / verbs that appear in requirements
+ * 
+ * ex: asteroids drift through space at some specific velocity - nouns: asteroid, space, and velocity // verb: drift (one or many objects may take on this job) 
+ * 
+ * UML -- unified modeling language
+ * 
+ * CRC cards (class responsibility collaborator) -- are a way to think through potential object-oriented designs and flesh out details (1 card per object in the system). On each card
+ * you will list three things 1. THE CLASS THAT THE OBJECT BLEONGS TO, WRITTEN AT THE TOP   2. THE RESPONSIBILITIES THAT OBJECT HAS ON THE LEFT SIDE  
+ * 3. THE OBJECTS COLLABORATORS THAT HELP THE OBJECT FULFILL ITS RESPONSIBILITIES 
+ * 
+ *          class names should be nouns or noun phrases 
+ *          responsibilities should be listed as a verb or verb phrase 
+ *          collaborators of an object are the names of other classes that this object needs to fulfill its duties (helpers) 
+ * 
+ * evaluating design: 
+ *          1. it has to work 
+ *          2. prefer designs that convey meaning and intent 
+ * 
+ */
 
 
 
