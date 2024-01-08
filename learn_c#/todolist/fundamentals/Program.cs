@@ -1048,6 +1048,36 @@ public class Player4 // when all of a class's properties and fields are immutabl
     }
 }
 
+// object initializer syntax and init properties 
+public class Circle
+{
+    public float X { get; set; } = 0; // the x coord of circles center 
+    public float Y { get; set; } = 0; // the y coord of the circles center 
+    public float Radius { get; set; } = 0; 
+}
+
+Circle circle = new Circle();
+circle.Radius = 3;
+circle.X = -4; 
+// object intializer syntax 
+Circle circle2 = new Circle() { Radius = 3, X = 4 };
+// we cannot use this type of syntax w/ get-only 
+
+
+
+// init -- this is a setter that can be used in limited circumstances, including w/ an inline intializer (the 0's below) and in the constructor but also in the object initializer syntax
+public class Circle2
+{
+    public float X { get; init; } = 0; // the x coord of circles center 
+    public float Y { get; init; } = 0; // the y coord of the circles center 
+    public float Radius { get; init; } = 0;
+}
+
+Circle2 circle3 = new Circle2 { X = 1, Y  = 2 };
+
+
+
+
 
 
 
