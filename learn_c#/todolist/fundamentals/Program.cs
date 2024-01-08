@@ -968,7 +968,7 @@ class Score2
 
 Rectangle rectangle1 = new Rectangle(4, 3);
 //rectangle1._area = 200; // anyone can just change the value of the area so we need to handle public vs private 
-rectangle1.Width = 6;
+//rectangle1.Width = 6;
 Console.WriteLine(rectangle1.Area); // now the fields are private and we cannot use / see this  
 class Rectangle
 {
@@ -986,7 +986,7 @@ class Rectangle
     public float Width
     {
         get => _width;
-        set => _width = value;
+        private set => _width = value;
     }
 
     public float Height
@@ -1002,6 +1002,51 @@ class Rectangle
 }
 
 
+
+// AUTO-IMPLEMENTED PROPERTIES -- this public class Player can be written much more concisely -- seen on line 1018
+public class Player
+{
+    private string _name;
+
+    public string Name
+    {
+        get => _name;
+        set => _name = value;
+    }
+}
+// below -- defines properties of this nature via auto-implemented property or an auto property 
+public class Player2
+{
+    public string Name { get; set; }
+}
+
+
+// immutable fields and properties 
+
+/* auto-properties can be 'get-only' like a regular property (they cannot be set-only) 
+ *when a property is get-only it can still be asigned values, but only from within a constructor (read-only properties) 
+ */
+
+public class Player3 // the getter is public so we can always retrieve Name current value and even w/o a setter we can assign a value to Name but we cannot change name after creation 
+{
+    public string Name { get; } = "Player 3";
+
+    public Player3(string name)
+    {
+        Name = name;
+    }
+}
+
+
+public class Player4 // when all of a class's properties and fields are immutable (get-only auto-properties and readonly fields) the entire object is immutable 
+{
+    private readonly string _name;
+
+    public Player4(string name)
+    {
+        _name = name;
+    }
+}
 
 
 
