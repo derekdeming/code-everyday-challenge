@@ -1132,12 +1132,12 @@ public class SomeClass
  * special reference: NULL REFERENCE -- helpful when it is possible for there to be no data available for something
  * 
  */
-string name44 = null;
-// NULL OR NOT? -- if null is allowed you will want to check it for null before using its members (methods, properties, fields, etc) 
-// any reference type var can either have a ? at the end or not. A ? means that it may legitimately contain a null value 
-string? name45 = Console.ReadLine(); // can return null or any legit string instance (without the ?, this means null is not an option) 
-if (name45 != null)
-    Console.WriteLine("the name is not null");
+//string name44 = null;
+//// NULL OR NOT? -- if null is allowed you will want to check it for null before using its members (methods, properties, fields, etc) 
+//// any reference type var can either have a ? at the end or not. A ? means that it may legitimately contain a null value 
+//string? name45 = Console.ReadLine(); // can return null or any legit string instance (without the ?, this means null is not an option) 
+//if (name45 != null)
+//    Console.WriteLine("the name is not null");
 
 //// two ways to integrate null checks 
 //private string? GetTopPlayerName()
@@ -1201,6 +1201,7 @@ if (name45 != null)
  * 
  */
 
+// CODING EXERCISE: 
 
 
 

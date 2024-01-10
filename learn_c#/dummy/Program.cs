@@ -52,6 +52,29 @@ class Rectangle
 
 }
 
+public class MonitorSignal
+{
+    private Telemetry[] MonitoringTelementryHandlers = new[] { new MonitorSignal() };
+    private static string workingDir = null;
+    private const string training = "training";
+    private const string signal = "monitoring";
+
+    private static string FormatTrainingSignal(string input)
+    {
+        var prefix = $"{signal}:{training}:";
+        string postfix = ":";
+        if (!String.IsNullOrEmpty(input))
+        {
+            prefix = input;
+        }
+        if (!String.IsNullOrEmpty(postfix))
+        {
+            postfix += workingDir;
+        }
+        return prefix + postfix;
+    }
+}
+
 
 
 
