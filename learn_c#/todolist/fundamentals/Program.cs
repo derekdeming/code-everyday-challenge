@@ -1201,8 +1201,21 @@ public class SomeClass
  * 
  */
 
-// CODING EXERCISE: 
 
+
+// INHERITANCE -- basing one class on another, retaining the original class's functionality while extending the new class with additional capabilities 
+/* it allows you to treat the subtypes as the more generalized type whenever necessary. It also allows you to consilidate what you would otherwise duplicate or copy and paste in two closely related classes 
+ * 
+ * a relationship where a type can expand upon another is an inheritance relationship 
+ * 
+ * three things happpen when we define an inheritance relationship betwen two classes: 
+ *          1. the new class gets everything the old class had 
+ *          2. the new class can add in extra stuff
+ *          3. the new class can always be treated as though it were the original since it has all of those capabilities 
+ *          
+ * The original is the base class (parent class or superclass). The new class that extends the base class is the derived calss (child class or subclass) 
+ * 
+ */
 
 
 
