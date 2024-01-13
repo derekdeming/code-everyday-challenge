@@ -1,0 +1,15 @@
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\c#\02_BasicsOfOOP\bin\Debug\net6.0\02_BasicsOfOOP.exe
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\c#\02_BasicsOfOOP\bin\Debug\net6.0\02_BasicsOfOOP.deps.json
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\c#\02_BasicsOfOOP\bin\Debug\net6.0\02_BasicsOfOOP.runtimeconfig.json
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\c#\02_BasicsOfOOP\bin\Debug\net6.0\02_BasicsOfOOP.dll
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\c#\02_BasicsOfOOP\bin\Debug\net6.0\02_BasicsOfOOP.pdb
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\c#\02_BasicsOfOOP\obj\Debug\net6.0\02_BasicsOfOOP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\c#\02_BasicsOfOOP\obj\Debug\net6.0\02_BasicsOfOOP.AssemblyInfoInputs.cache
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\c#\02_BasicsOfOOP\obj\Debug\net6.0\02_BasicsOfOOP.AssemblyInfo.cs
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\c#\02_BasicsOfOOP\obj\Debug\net6.0\02_BasicsOfOOP.csproj.CoreCompileInputs.cache
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\c#\02_BasicsOfOOP\obj\Debug\net6.0\02_BasicsOfOOP.sourcelink.json
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\c#\02_BasicsOfOOP\obj\Debug\net6.0\02_BasicsOfOOP.dll
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\c#\02_BasicsOfOOP\obj\Debug\net6.0\refint\02_BasicsOfOOP.dll
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\c#\02_BasicsOfOOP\obj\Debug\net6.0\02_BasicsOfOOP.pdb
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\c#\02_BasicsOfOOP\obj\Debug\net6.0\02_BasicsOfOOP.genruntimeconfig.cache
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\c#\02_BasicsOfOOP\obj\Debug\net6.0\ref\02_BasicsOfOOP.dll
