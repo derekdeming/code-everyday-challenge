@@ -1,0 +1,15 @@
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\c#\02_DiceRollGame\bin\Debug\net6.0\02_DiceRollGame.exe
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\c#\02_DiceRollGame\bin\Debug\net6.0\02_DiceRollGame.deps.json
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\c#\02_DiceRollGame\bin\Debug\net6.0\02_DiceRollGame.runtimeconfig.json
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\c#\02_DiceRollGame\bin\Debug\net6.0\02_DiceRollGame.dll
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\c#\02_DiceRollGame\bin\Debug\net6.0\02_DiceRollGame.pdb
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\c#\02_DiceRollGame\obj\Debug\net6.0\02_DiceRollGame.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\c#\02_DiceRollGame\obj\Debug\net6.0\02_DiceRollGame.AssemblyInfoInputs.cache
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\c#\02_DiceRollGame\obj\Debug\net6.0\02_DiceRollGame.AssemblyInfo.cs
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\c#\02_DiceRollGame\obj\Debug\net6.0\02_DiceRollGame.csproj.CoreCompileInputs.cache
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\c#\02_DiceRollGame\obj\Debug\net6.0\02_DiceRollGame.sourcelink.json
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\c#\02_DiceRollGame\obj\Debug\net6.0\02_DiceRollGame.dll
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\c#\02_DiceRollGame\obj\Debug\net6.0\refint\02_DiceRollGame.dll
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\c#\02_DiceRollGame\obj\Debug\net6.0\02_DiceRollGame.pdb
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\c#\02_DiceRollGame\obj\Debug\net6.0\02_DiceRollGame.genruntimeconfig.cache
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\c#\02_DiceRollGame\obj\Debug\net6.0\ref\02_DiceRollGame.dll
