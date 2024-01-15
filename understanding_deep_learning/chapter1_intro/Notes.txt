@@ -1,0 +1,26 @@
+Chapter 1 - Introduction 
+
+1.1.1 regression and classification problems 
+regression problems -- the model returns a continous number (rather than a category assignmnet)
+
+multivariate regression problem predicts more than one number (ex: taking the chemical structure of a molecule as an input and predicting both the melting and boiling points)
+
+binary classification - the model receives a text string containing a restaurant review as input and predicts whether the review is positive or negative. Model attempts to assign the input to one of two categories 
+
+multiclass classification problem - the model asigns the input to one of N>2 categories. In the first case, the input is an audio file and the model predicts which genre of music it contains. In the second case, the input is an image, and the model predicts which object it contains. In each case the model returns a vector of size N that contains the probabilities of the N categories
+
+tabular data - no internal structure (ex: house pricing, the input is a fixed-length vector containing values that characterize the property)
+
+
+Deep NN (DNN) -- they are equations that can represent an extremely broad family of relationships between input and output, where it is particularly easy to search through this family to find the relationship that describes the training data 
+        - They can output single real numbers (regression), mutliple numbers (multivariate regression), or probabilities over two or more classes (binary and multiclass classification, respectively) 
+
+
+Unsupervised learning -- constructing a model from input data without corresponding output labels  (the absence of output labels means there can be no "supervision")
+        - the goal is to describe or understand the structure of the data
+
+generative Unsupervised models -- learn to synthesize new data examples that are statistically indistinguishable from the training data
+
+
+reinforcement learning -- this paradigm introduces the idea of an agent which lives in a world and can perform certain actions at each time step. The actions change the state of the system but not necessarily in a deterministic way. The goal is for the agent to learn to choose actions that lead to high rewards on average 
+        -- temporal credit assignment problem -- when the path of actions --> rewards is not straight forward. The agent needs to learn the trade off between exploration and exploitation (exploiting what it knows vs exploring other opportunities)
