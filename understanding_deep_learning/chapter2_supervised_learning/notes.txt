@@ -1,0 +1,47 @@
+supervised learning model defines a mapping from one or two inputs to one or more outputs
+
+the model is just a mathematical equation; when the inputs are passed through this equation, it computes the output and this is termed inference
+
+when we train or learn a model, we find parameters that describe the true relationship between inputs and outputs 
+
+we aim to build a model that takes an input x and outputs a prediction y. y = f[x]
+
+when we compute the prediction y from the input x, we call this inference
+
+the model also contains parameters [ϕ]. The choice of parameters dtermines the particular relation between input and output, so y=f[x] actually becomes y=f[x,ϕ]
+
+when we train the model, we are seeking parameters (ϕ^) that minimize the loss function (L[ϕ])
+         ϕ^ = argmin[L[ϕ]]
+
+
+a 1D linear regression model describes the relationship between input x and output y as a straight line: 
+
+        y = f[x, ϕ]
+            = ϕ(0) + ϕ(1)x       where (0, 1) are the subscripts to ϕ
+
+
+this model has two parameters ϕ = [ϕ(0), ϕ(1)]^T, where ϕ(0) is the y-intercept of the line and ϕ(1) is the slope. Different choices for the y-intercept and slow result in different relations between the input and output 
+
+
+choosing parameters better: 
+        we assign a numerical value to each choice of parameters that quantifies the degree of mismatch between the model and the data. We term this value the loss; a lower loss means a better fit 
+
+        the mismatch is captured by the deviation between the model preictions f[x(i), ϕ] (hieght of the line at x(i)) and the ground truth outputs y(i)
+
+        we quantify the total mismatch, training error, or the loss as the sum of the squares of these deviations for all training pairs: 
+
+                L(ϕ) = summation(ϕ(0) + ϕ(1)x(i) - y(i))^2     -- this is the least-squares loss. The squaring operation means that the direction of the deviation (i.e., whether the line is above or below the data) is unimportant
+
+                The loss L is a function of the parameters (ϕ); it will be larger when the model fit is poor and smaller when it is good
+
+                ϕ^ = argmin[L[ϕ]]
+                    = argmin [summation (f[x(i), ϕ] - y)^2]
+                     = argmin [summation (ϕ(0) + ϕ(1)x - y)^2]
+                     where there are only two parameters (the y-intercept ϕ(0) and slope ϕ(1)) so we can calculate the loss for every combination of values and viaulize the loss function as a surface. The "best" parameters are at the min of this surface 
+
+
+training process -- choose the initial parameters randomly and then improve them by "walking down" the loss function until we reach the bottom. One way to do this is to measure the gradient of the surface at the current position and take a step in the direction that is most steeply downhill and then we repeat until gradient is flat and we can improve no further 
+
+testing process -- we do this by computing the loss on a separate set of test data. The degree to which the prediction accuracy generalizes to the test data depends on the part on how representative and complete the training data is 
+        -- a simple model like a line might not be able to capture the true relationship between input and output which is known as underfitting 
+        -- a very expressive model may describe statistical peculiarities of the training data that are atypical and lead to unusual predictions which is known as overfitting   
