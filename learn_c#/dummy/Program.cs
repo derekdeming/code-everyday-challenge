@@ -122,3 +122,4 @@ public class MonitorSignal
 //        _area = _width * _height;
 //    }
 //}
+
