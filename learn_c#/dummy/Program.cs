@@ -1,9 +1,9 @@
 ﻿
-Rectangle rectangle1 = new Rectangle(4, 3);
+// Rectangle rectangle1 = new Rectangle(4, 3);
 //rectangle1._area = 200; // anyone can just change the value of the area so we need to handle public vs private 
-Console.WriteLine(rectangle1.Area);
-rectangle1.Width = 7;
-Console.WriteLine(rectangle1.Area);
+// Console.WriteLine(rectangle1.Area);
+// rectangle1.Width = 7;
+// Console.WriteLine(rectangle1.Area);
 
 
 class Rectangle
@@ -52,28 +52,28 @@ class Rectangle
 
 }
 
-public class MonitorSignal
-{
-    private Telemetry[] MonitoringTelementryHandlers = new[] { new MonitorSignal() };
-    private static string workingDir = null;
-    private const string training = "training";
-    private const string signal = "monitoring";
-
-    private static string FormatTrainingSignal(string input)
-    {
-        var prefix = $"{signal}:{training}:";
-        string postfix = ":";
-        if (!String.IsNullOrEmpty(input))
-        {
-            prefix = input;
-        }
-        if (!String.IsNullOrEmpty(postfix))
-        {
-            postfix += workingDir;
-        }
-        return prefix + postfix;
-    }
-}
+// public class MonitorSignal
+// {
+//     private Telemetry[] MonitoringTelementryHandlers = new[] { new MonitorSignal() };
+//     private static string workingDir = null;
+//     private const string training = "training";
+//     private const string signal = "monitoring";
+// 
+//     private static string FormatTrainingSignal(string input)
+//     {
+//         var prefix = $"{signal}:{training}:";
+//         string postfix = ":";
+//         if (!String.IsNullOrEmpty(input))
+//         {
+//             prefix = input;
+//         }
+//         if (!String.IsNullOrEmpty(postfix))
+//         {
+//             postfix += workingDir;
+//         }
+//         return prefix + postfix;
+//     }
+// }
 
 
 
