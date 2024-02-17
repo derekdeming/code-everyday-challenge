@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("02_DiceRollGame")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d508bf4c39844f14f4ee1bb933ad1d0895ffc45c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("02_DiceRollGame")]
 [assembly: System.Reflection.AssemblyTitleAttribute("02_DiceRollGame")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
