@@ -1,0 +1,5 @@
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\learn_c#\datatypes\obj\Debug\net8.0\datatypes.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\learn_c#\datatypes\obj\Debug\net8.0\datatypes.AssemblyInfoInputs.cache
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\learn_c#\datatypes\obj\Debug\net8.0\datatypes.AssemblyInfo.cs
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\learn_c#\datatypes\obj\Debug\net8.0\datatypes.csproj.CoreCompileInputs.cache
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\learn_c#\datatypes\obj\Debug\net8.0\datatypes.sourcelink.json

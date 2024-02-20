@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\dummy",
+    "\\fundamentals\\obj\\x86",
+    "\\fundamentals\\obj\\x86\\Debug"
   ],
-  "SelectedNode": "\\learn_C#.docx",
+  "SelectedNode": "\\dummy\\dummy.sln",
   "PreviewInSolutionExplorer": false
 }
