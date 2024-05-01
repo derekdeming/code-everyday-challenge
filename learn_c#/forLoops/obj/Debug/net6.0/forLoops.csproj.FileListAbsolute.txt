@@ -1,0 +1,15 @@
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\learn_c#\forLoops\bin\Debug\net6.0\forLoops.exe
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\learn_c#\forLoops\bin\Debug\net6.0\forLoops.deps.json
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\learn_c#\forLoops\bin\Debug\net6.0\forLoops.runtimeconfig.json
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\learn_c#\forLoops\bin\Debug\net6.0\forLoops.dll
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\learn_c#\forLoops\bin\Debug\net6.0\forLoops.pdb
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\learn_c#\forLoops\obj\Debug\net6.0\forLoops.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\learn_c#\forLoops\obj\Debug\net6.0\forLoops.AssemblyInfoInputs.cache
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\learn_c#\forLoops\obj\Debug\net6.0\forLoops.AssemblyInfo.cs
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\learn_c#\forLoops\obj\Debug\net6.0\forLoops.csproj.CoreCompileInputs.cache
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\learn_c#\forLoops\obj\Debug\net6.0\forLoops.sourcelink.json
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\learn_c#\forLoops\obj\Debug\net6.0\forLoops.dll
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\learn_c#\forLoops\obj\Debug\net6.0\refint\forLoops.dll
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\learn_c#\forLoops\obj\Debug\net6.0\forLoops.pdb
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\learn_c#\forLoops\obj\Debug\net6.0\forLoops.genruntimeconfig.cache
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\learn_c#\forLoops\obj\Debug\net6.0\ref\forLoops.dll

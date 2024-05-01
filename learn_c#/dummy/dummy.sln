@@ -5,7 +5,11 @@ VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dummy", "dummy.csproj", "{7252702E-1873-4A99-A44E-4BBF021FBFD7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "operatorOverloading", "..\operatorOverloading\operatorOverloading.csproj", "{A9F2AF66-D9B0-460A-80CA-37ACC2096AF7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "operatorOverloading", "..\operatorOverloading\operatorOverloading.csproj", "{A9F2AF66-D9B0-460A-80CA-37ACC2096AF7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "conditionals", "..\conditionals\conditionals.csproj", "{A242431A-6F5A-4B96-9BFF-7F08793AF713}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "forLoops", "..\forLoops\forLoops.csproj", "{8D4B2722-C545-4F05-ABCB-260974D948BC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{A9F2AF66-D9B0-460A-80CA-37ACC2096AF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9F2AF66-D9B0-460A-80CA-37ACC2096AF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9F2AF66-D9B0-460A-80CA-37ACC2096AF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A242431A-6F5A-4B96-9BFF-7F08793AF713}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A242431A-6F5A-4B96-9BFF-7F08793AF713}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A242431A-6F5A-4B96-9BFF-7F08793AF713}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A242431A-6F5A-4B96-9BFF-7F08793AF713}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D4B2722-C545-4F05-ABCB-260974D948BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D4B2722-C545-4F05-ABCB-260974D948BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D4B2722-C545-4F05-ABCB-260974D948BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D4B2722-C545-4F05-ABCB-260974D948BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
