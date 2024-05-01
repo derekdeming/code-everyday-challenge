@@ -13,3 +13,11 @@ C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\learn_c#\dumm
 C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\learn_c#\dummy\obj\Debug\net6.0\dummy.pdb
 C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\learn_c#\dummy\obj\Debug\net6.0\dummy.genruntimeconfig.cache
 C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\learn_c#\dummy\obj\Debug\net6.0\ref\dummy.dll
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\c#\dummy\obj\Debug\net6.0\dummy.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\c#\dummy\obj\Debug\net6.0\dummy.AssemblyInfoInputs.cache
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\c#\dummy\obj\Debug\net6.0\dummy.AssemblyInfo.cs
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\c#\dummy\obj\Debug\net6.0\dummy.csproj.CoreCompileInputs.cache
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\c#\dummy\obj\Debug\net6.0\dummy.sourcelink.json
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\c#\dummy\obj\Debug\net6.0\dummy.dll
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\c#\dummy\obj\Debug\net6.0\refint\dummy.dll
+C:\Users\derek\cs_projects\coding_everyday\code-everyday-challenge\c#\dummy\obj\Debug\net6.0\dummy.pdb
